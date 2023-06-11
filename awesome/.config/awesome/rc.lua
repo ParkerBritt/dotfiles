@@ -48,7 +48,7 @@ end
 awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
 -- awful.spawn.once("picom")
 awful.spawn.once("polybar")
-awful.spawn.once("~/scripts/mouseSpeed.sh")
+awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
