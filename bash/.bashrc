@@ -1,6 +1,7 @@
 # .bashrc
 # echo 'bashrc test'
 
+
 # DECORATOR
 # fastfetch
 colorscript --exec panes
@@ -36,6 +37,9 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 source ~/.bash_aliases
 source $HOME/.bash_functions

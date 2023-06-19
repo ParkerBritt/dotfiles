@@ -2,6 +2,7 @@
 alias la='ls -a'
 alias logout='qdbus org.kde.ksmserver /KSMServer logout 0 0 0'
 alias ll='exa -alh'
+alias llatest='exa -alh -s created -r'
 alias vim='nvim'
 alias top='bpytop'
 alias fetch='~/scripts/fetch/fetch.sh'
