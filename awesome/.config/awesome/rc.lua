@@ -356,7 +356,13 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     awful.key({ "Mod1" }, "Tab", function() awful.spawn("rofi -show window") end,
-    	      {description = "show open windows", group = "launcher"})
+	   	      	{description = "show open windows", group = "launcher"}),
+
+		-- Scrolling
+    awful.key({ modkey, "Control"}, "j",   awful.tag.viewprev,
+              {description = "view previous", group = "tag"}),
+    awful.key({ modkey, "Control"}, "k",  awful.tag.viewnext,
+              {description = "view next", group = "tag"})
 )
 
 clientkeys = gears.table.join(
