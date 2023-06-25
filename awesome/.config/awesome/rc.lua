@@ -359,9 +359,9 @@ globalkeys = gears.table.join(
 	   	      	{description = "show open windows", group = "launcher"}),
 
 		-- Scrolling
-    awful.key({ modkey, "Control"}, "j",   awful.tag.viewprev,
+    awful.key({ modkey}, "h",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
-    awful.key({ modkey, "Control"}, "k",  awful.tag.viewnext,
+    awful.key({ modkey}, "l",  awful.tag.viewnext,
               {description = "view next", group = "tag"})
 )
 
