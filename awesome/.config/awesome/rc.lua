@@ -8,7 +8,6 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
-local battery_widget = require("battery-widget") --battery widget
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -222,9 +221,6 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-            battery_widget {
-                -- pass options here
-            },
             mytextclock,
             s.mylayoutbox,
         },
