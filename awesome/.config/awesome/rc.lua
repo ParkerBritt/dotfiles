@@ -48,6 +48,8 @@ awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
 -- awful.spawn.once("picom")
 awful.spawn.once("polybar")
 awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
+-- awful.spawn.with_shell("polkit-gnome-authentication-agent-1") -- polkit prompts for sudo when an application needs it
+ awful.spawn.with_shell("lxpolkit")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -324,10 +326,10 @@ globalkeys = gears.table.join(
                   end
               end,
               {description = "restore minimized", group = "client"}),
+	      
+	-- USER ADDED KEYBINDS:
 
-    -- Prompt
-    --awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-    --          {description = "run prompt", group = "launcher"}),
+    -- Rofi
     awful.key({ modkey }, "r", function () awful.spawn("rofi -show drun") end,
               {description = "rofi run prompt", group = "launcher"}),
 
@@ -358,7 +360,12 @@ globalkeys = gears.table.join(
     awful.key({ modkey}, "h",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey}, "l",  awful.tag.viewnext,
-              {description = "view next", group = "tag"})
+              {description = "view next", group = "tag"}),
+
+    awful.key({ modkey, "Control" }, "h", function () awful.screen.focus_relative(-1) end,
+             {description = "focus the previous screen", group = "screen"}),
+    awful.key({ modkey, "Control" }, "l", function () awful.screen.focus_relative(1) end,
+             {description = "focus the next screen", group = "screen"})
 )
 
 clientkeys = gears.table.join(

@@ -5,3 +5,5 @@ polybar
 rofi
 kitty
 tldr
+bpytop
+lxpolkit
