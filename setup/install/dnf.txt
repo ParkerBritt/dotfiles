@@ -7,3 +7,4 @@ kitty
 tldr
 bpytop
 lxpolkit
+tumber
