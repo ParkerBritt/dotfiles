@@ -1,0 +1,9 @@
+autojump
+picom
+fastfetch
+polybar
+rofi
+kitty
+tldr
+bpytop
+lxpolkit
