@@ -49,7 +49,8 @@ awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
 awful.spawn.once("polybar")
 awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
 -- awful.spawn.with_shell("polkit-gnome-authentication-agent-1") -- polkit prompts for sudo when an application needs it
- awful.spawn.with_shell("lxpolkit")
+awful.spawn.with_shell("lxpolkit")
+awful.spawn.with_shell("$HOME/scripts/mouse-speed-old/mouse_speed.sh") -- run mouse speed fix
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
