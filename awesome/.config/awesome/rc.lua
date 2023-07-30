@@ -52,6 +52,13 @@ awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("$HOME/scripts/mouse-speed-old/mouse_speed.sh") -- run mouse speed fix
 
+-- lock screen
+awful.spawn.with_shell("xss-lock -- i3lock -n")
+
+-- set rgb
+awful.spawn.with_shell("openrgb --startminimized -p blue")
+
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/parker/.config/awesome/theme.lua")
@@ -294,6 +301,8 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,           }, "b", function () awful.spawn("firefox") end,
+              {description = "open a web browser", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
