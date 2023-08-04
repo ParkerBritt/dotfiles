@@ -52,9 +52,6 @@ awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("$HOME/scripts/mouse-speed-old/mouse_speed.sh") -- run mouse speed fix
 
--- lock screen
-awful.spawn.with_shell("xss-lock -- i3lock -n")
-
 -- set rgb
 awful.spawn.with_shell("openrgb --startminimized -p blue")
 
@@ -344,7 +341,7 @@ globalkeys = gears.table.join(
               {description = "rofi run prompt", group = "launcher"}),
 
     -- Screenshot
-    awful.key({modkey, "Shift"}, "s", function() awful.spawn("spectacle -brc") end,
+    awful.key({modkey, "Shift"}, "s", function() awful.spawn("flameshot gui") end,
     		{description = "spectacle take screenshot", group = "launcher"}),
 
 
@@ -612,4 +609,5 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+awful.util.spawn("xset s off -dpms")
 
