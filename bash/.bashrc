@@ -41,5 +41,5 @@ unset rc
 export EDITOR=nvim
 export VISUAL=nvim
 
-source ~/.bash_aliases
+source $HOME/.bash_aliases
 source $HOME/.bash_functions
