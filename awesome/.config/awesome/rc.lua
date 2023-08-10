@@ -14,6 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local tagnames = { " 1", "󰈹 2", "󰙯 3", "󰊴 4", " 5", "󰆧 6", "7", "8", "9" }
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -176,7 +177,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ " 1", "󰈹 2", "󰙯 3", "󰊴 4", " 5", "󰆧 6", "7", "8", "9" }, s, awful.layout.layouts[8])
+    awful.tag(tagnames, s, awful.layout.layouts[8])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -591,6 +592,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn("xset s off -dpms")
 
 -- source rules
-local rules = require("rules")(clientkeys, clientbuttons)
+local rules = require("rules")(clientkeys, clientbuttons, tagnames)
 -- Apply rules
 awful.rules.rules = rules
