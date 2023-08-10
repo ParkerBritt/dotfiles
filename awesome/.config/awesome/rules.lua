@@ -58,19 +58,19 @@ return function(clientkeys, clientbuttons)
 	    -- Put windows in specfic tags
 	    -- Discord
 	    { rule = { class = "discord" },
-	      properties = { screen = 1, tag = "3" } },
+	      properties = { screen = 1, tag = "󰙯 3" } },
 	
 	    -- Steam
 	    { rule = { class = "steam" },
-	      properties = { screen = 1, tag = "4" } },
+	      properties = { screen = 1, tag = "󰊴 4" } },
 	
 	    -- Spotify (Keeping the assumed class name here, but use xprop to verify the exact class if needed)
 	    { rule = { class = "Spotify" },
-	      properties = { screen = 1, tag = "5" } },
+	      properties = { screen = 1, tag = " 5" } },
 	
 	    -- Houdini 
 	    { rule = { class = "Houdini FX" },
-	      properties = { screen = 1, tag = "6" } },
+	      properties = { screen = 1, tag = "󰆧 6" } },
 	}
 	return rules
 end
