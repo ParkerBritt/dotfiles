@@ -18,3 +18,8 @@ awful.spawn.with_shell("$HOME/scripts/mouse-speed/mouse_speed.sh") -- run mouse 
 
 -- set rgb
 awful.spawn.with_shell("openrgb --startminimized -p blue")
+
+-- tag specific
+awful.spawn.once("discord")
+awful.spawn.once("steam")
+awful.spawn.once("spotify")
