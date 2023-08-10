@@ -18,6 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -44,17 +45,7 @@ end
 -- }}}
 
 -- START PROCESSES
-awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
--- awful.spawn.once("picom")
-awful.spawn.once("polybar")
-awful.spawn.with_shell("~/scripts/mouseSpeed.sh")
--- awful.spawn.with_shell("polkit-gnome-authentication-agent-1") -- polkit prompts for sudo when an application needs it
-awful.spawn.with_shell("lxpolkit")
-awful.spawn.with_shell("$HOME/scripts/mouse-speed-old/mouse_speed.sh") -- run mouse speed fix
-
--- set rgb
-awful.spawn.with_shell("openrgb --startminimized -p blue")
-
+require("startup")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -185,7 +176,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[8])
+    awful.tag({ " 1", "󰈹 2", "󰙯 3", "󰊴 4", " 5", "󰆧 6", "7", "8", "9" }, s, awful.layout.layouts[8])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -294,6 +285,51 @@ globalkeys = gears.table.join(
             end
         end,
         {description = "go back", group = "client"}),
+
+	-- Move focused client to the next tag
+	awful.key({ modkey, "Shift"   }, "l", function ()
+	    local c = client.focus
+	    local curidx = awful.tag.getidx(c:tags()[1])
+	    if curidx == #awful.tag.gettags(c.screen) then
+	        awful.client.movetotag(awful.tag.gettags(c.screen)[1])
+	    else
+	        awful.client.movetotag(awful.tag.gettags(c.screen)[curidx + 1])
+	    end
+	end,
+	{description = "move client to next tag", group = "client"}),
+	
+	-- Move focused client to the previous tag
+	awful.key({ modkey, "Shift"   }, "h", function ()
+	    local c = client.focus
+	    local curidx = awful.tag.getidx(c:tags()[1])
+	    if curidx == 1 then
+	        awful.client.movetotag(awful.tag.gettags(c.screen)[#awful.tag.gettags(c.screen)])
+	    else
+	        awful.client.movetotag(awful.tag.gettags(c.screen)[curidx - 1])
+	    end
+	end,
+	{description = "move client to previous tag", group = "client"}),
+
+
+	-- Media Controls
+
+	-- Previous song in Spotify
+	awful.key({ "Control", "Mod1" }, "Left", function ()
+	    awful.spawn("playerctl -p spotify previous")
+	end,
+	{description = "previous spotify song", group = "media"}),
+	
+	-- Next song in Spotify
+	awful.key({ "Control", "Mod1" }, "Right", function ()
+	    awful.spawn("playerctl -p spotify next")
+	end,
+	{description = "next spotify song", group = "media"}),
+	
+	-- Toggle play/pause in Spotify
+	awful.key({}, "Print", function ()
+	    awful.spawn("playerctl -p spotify play-pause")
+	end,
+	{description = "toggle play/pause spotify", group = "media"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
@@ -487,63 +523,6 @@ clientbuttons = gears.table.join(
 root.keys(globalkeys)
 -- }}}
 
--- {{{ Rules
--- Rules to apply to new clients (through the "manage" signal).
-awful.rules.rules = {
-    -- All clients will match this rule.
-    { rule = { },
-      properties = { border_width = beautiful.border_width,
-                     border_color = beautiful.border_normal,
-                     focus = awful.client.focus.filter,
-                     raise = true,
-                     keys = clientkeys,
-                     buttons = clientbuttons,
-                     screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
-     }
-    },
-
-    -- Floating clients.
-    { rule_any = {
-        instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
-          "pinentry",
-        },
-        class = {
-          "Arandr",
-          "Blueman-manager",
-          "Gpick",
-          "Kruler",
-          "MessageWin",  -- kalarm.
-          "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-          "Wpa_gui",
-          "veromix",
-          "xtightvncviewer"},
-
-        -- Note that the name property shown in xprop might be set slightly after creation of the client
-        -- and the name shown there might not match defined rules here.
-        name = {
-          "Event Tester",  -- xev.
-        },
-        role = {
-          "AlarmWindow",  -- Thunderbird's calendar.
-          "ConfigManager",  -- Thunderbird's about:config.
-          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
-        }
-      }, properties = { floating = true }},
-
-    -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false}
-    },
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
-}
--- }}}
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
@@ -611,3 +590,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.util.spawn("xset s off -dpms")
 
+-- source rules
+local rules = require("rules")(clientkeys, clientbuttons)
+-- Apply rules
+awful.rules.rules = rules
