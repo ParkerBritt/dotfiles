@@ -71,6 +71,18 @@ return function(clientkeys, clientbuttons, tagnames)
 	    -- Houdini 
 	    { rule = { class = "Houdini FX" },
 	      properties = { screen = 1, tag = tagnames[6] } },
+
+	      -- AT launcher Specific rule for "win6" of "com-atlauncher-App"
+	      {
+		    rule = { class = "com-atlauncher-App" },
+		    callback = function (c)
+		        if c.skip_taskbar then
+		            c.floating = true
+		        end
+		    end
+	      },
+
+
 	}
 	return rules
 end
