@@ -4,7 +4,8 @@ configuration {
   drun-display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font Medium 10";
   modi: "window,run,drun";
-  drun-icon-theme: "breeze";
+  show-icons: true;
+  icon-theme: "Papirus";
 }
 
 @theme "/dev/null"
@@ -47,7 +48,7 @@ element-text {
 }
 
 element-icon {
-  size: 14;
+  size: 30;
   padding: 0 10 0 0;
   background-color: transparent;
 }
