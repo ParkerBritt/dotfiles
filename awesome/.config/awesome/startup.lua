@@ -22,4 +22,4 @@ awful.spawn.with_shell("openrgb --startminimized -p blue")
 -- tag specific
 awful.spawn.once("discord")
 awful.spawn.once("steam")
-awful.spawn.once("spotify")
+awful.spawn.once("spotify-launcher")
