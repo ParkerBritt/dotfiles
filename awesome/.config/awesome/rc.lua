@@ -335,10 +335,11 @@ globalkeys = gears.table.join(
 	{description = "next spotify song", group = "media"}),
 	
 	-- Toggle play/pause in Spotify
-	awful.key({}, "Print", function ()
-	    awful.spawn("playerctl -p spotify play-pause")
-	end,
-	{description = "toggle play/pause spotify", group = "media"}),
+	awful.key({}, "XF86AudioPlay", function () awful.spawn("playerctl play-pause") end),
+
+	awful.key({}, "XF86AudioRaiseVolume", function () awful.spawn("pamixer --increase 5") end),
+	awful.key({}, "XF86AudioLowerVolume", function () awful.spawn("pamixer --decrease 5") end),
+
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
