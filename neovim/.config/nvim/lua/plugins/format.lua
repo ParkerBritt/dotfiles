@@ -2,7 +2,11 @@ return {
     {
 	"NMAC427/guess-indent.nvim",
 	config = function()
-	    require('guess-indent').setup {}
+	    require('guess-indent').setup()
+        opts = {
+            auto_cmd = true,
+            override_editorconfig = true
+        }
 	end,
     },
 
