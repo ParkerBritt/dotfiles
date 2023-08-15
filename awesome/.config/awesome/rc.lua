@@ -1,4 +1,4 @@
--- If LuaRocks is installed, make sure that packages installed through it are
+-- If LuaRocks is installed, make sure th
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
@@ -14,7 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local tagnames = { " 1", "󰈹 2", "󰙯 3", "󰊴 4", " 5", "󰆧 6", "7", "8", "9" }
+local tagnames = { "", "󰈹", "󰙯", "󱎓", "", "󰆧", "", "", "" }
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -314,10 +314,10 @@ globalkeys = gears.table.join(
 	{description = "move client to previous tag", group = "client"}),
 
 	-- Scrolling
-        awful.key({ modkey}, "h",   awful.tag.viewprev,
-                  {description = "view previous", group = "tag"}),
-        awful.key({ modkey}, "l",  awful.tag.viewnext,
-                  {description = "view next", group = "tag"}),
+    awful.key({ modkey}, "h",   awful.tag.viewprev,
+              {description = "view previous", group = "tag"}),
+    awful.key({ modkey}, "l",  awful.tag.viewnext,
+              {description = "view next", group = "tag"}),
 
 
 	-- Media Controls
@@ -352,10 +352,10 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "awesome"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
+    --           {description = "increase master width factor", group = "layout"}),
+    -- awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
+    --           {description = "decrease master width factor", group = "layout"}),
+    -- awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
