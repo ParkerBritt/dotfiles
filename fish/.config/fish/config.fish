@@ -8,7 +8,7 @@ if status is-interactive
     source $HOME/.config/fish/aliases.fish
     starship init fish | source
 
-    colorscript --exec panes
+    rand-colorscript
 
     source /usr/share/autojump/autojump.fish
 

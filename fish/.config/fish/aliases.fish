@@ -15,3 +15,10 @@ alias calc="qalc"
 alias yay="yay --color always"
 alias clip="xsel -b"
 alias cal="calcure"
+alias dust-sum="dust -bd 0"
+
+alias bar-open "eww open bar -c ~/.config/eww/bar"
+alias bar-close "eww close bar -c ~/.config/eww/bar"
+
+# backup
+alias back-snapshot="restic -r /mnt/backup-drive/restic-backup/ snapshots"
