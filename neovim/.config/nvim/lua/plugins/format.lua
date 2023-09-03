@@ -13,10 +13,31 @@ return {
     -- lsp
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+  --   {"williamboman/mason.nvim", config = function() require("mason").setup() end},
+  --   {
+  --       "williamboman/mason-lspconfig.nvim",
+		-- config = function()
+		-- 	require("mason-lspconfig").setup()
+  --           require("lspconfig").lua_ls {}
+		-- end,
+  --       opts = {
+  --           ensure_installed = { "lua_ls" }
+  --       }
+  --   },
     "neovim/nvim-lspconfig",
 
+    -- 'neovim/nvim-lspconfig',
+    -- 'jose-elias-alvarez/null-ls.nvim',
+    -- {
+    --     'MunifTanjim/prettier.nvim',
+    --     config = function()
+    --         require("prettier").setup()
+    --     end 
+    -- },
+    'sbdchd/neoformat',
 
 
+    
 
 
 }
