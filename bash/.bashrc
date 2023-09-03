@@ -43,3 +43,5 @@ export VISUAL=nvim
 
 source $HOME/.bash_aliases
 source $HOME/.bash_functions
+
+source /home/parker/.config/broot/launcher/bash/br
