@@ -11,6 +11,8 @@ end
 run_once("/usr/lib/lxpolkit/lxpolkit")
 
 awful.spawn.with_shell("picom --config ~/.config/picom/picom.conf")
+-- awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.once("/home/parker/scripts/wallpaper/random-wallpaper.sh")
 awful.spawn.once("polybar")
 -- awful.spawn.with_shell("lxpolkit") old version for nobara
 --awful.spawn.with_shell("/usr/lib/lxpolkit/lxpolkit")

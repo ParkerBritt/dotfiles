@@ -45,15 +45,14 @@ do
 end
 -- }}}
 
--- START PROCESSES
-require("startup")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/parker/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
+-- terminal = "kitty"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -66,19 +65,19 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
     awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.max,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.magnifier,
+    -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -177,7 +176,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag(tagnames, s, awful.layout.layouts[8])
+    awful.tag(tagnames, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -245,10 +244,10 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    --           {description = "view previous", group = "tag"}),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    --           {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
@@ -286,6 +285,18 @@ globalkeys = gears.table.join(
             end
         end,
         {description = "go back", group = "client"}),
+
+    -- Tag app specific binds
+    -- discord
+    awful.key({ modkey }, "d", function()
+        local screen = awful.screen.focused()
+        local tag3 = screen.tags[3]
+
+        if tag3 then
+            awful.tag.viewtoggle(tag3)
+        end
+    end,
+    {description = "move to discord tag", group = "tag"}),
 
 	-- Move focused client to the next tag
 	awful.key({ modkey, "Shift"   }, "l", function ()
@@ -351,11 +362,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-    --           {description = "increase master width factor", group = "layout"}),
-    -- awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-    --           {description = "decrease master width factor", group = "layout"}),
-    -- awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
+    awful.key({ modkey,           }, "Right",     function () awful.tag.incmwfact( 0.05)          end,
+              {description = "increase master width factor", group = "layout"}),
+    awful.key({ modkey,           }, "Left",     function () awful.tag.incmwfact(-0.05)          end,
+              {description = "decrease master width factor", group = "layout"}),
+    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
@@ -599,3 +610,6 @@ awful.util.spawn("xset s off -dpms")
 local rules = require("rules")(clientkeys, clientbuttons, tagnames)
 -- Apply rules
 awful.rules.rules = rules
+
+-- START PROCESSES
+require("startup")

@@ -16,7 +16,6 @@ return function(clientkeys, clientbuttons, tagnames)
 	                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
 	     }
 	    },
-	
 	    -- Floating clients.
 	    { rule_any = {
 	        instance = {
@@ -54,7 +53,13 @@ return function(clientkeys, clientbuttons, tagnames)
 	    { rule_any = {type = { "normal", "dialog" }
 	      }, properties = { titlebars_enabled = false}
 	    },
-	
+
+		-- Rule for Polybar
+		{
+			rule = { class = "Polybar" },
+			properties = { border_width = 0, sticky = true, above = true, focusable = false, resizable = false }
+		},	
+
 	    -- Put windows in specfic tags
 	    -- Discord
 	    { rule = { class = "discord" },
