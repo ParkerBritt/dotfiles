@@ -6,4 +6,5 @@ if test -f ~/.config/fish/credentials.fish
     source ~/.config/fish/credentials.fish
 end
 
+set -gx EDITOR nvim
 
