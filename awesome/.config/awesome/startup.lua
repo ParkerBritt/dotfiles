@@ -16,11 +16,11 @@ awful.spawn.once("/home/parker/scripts/wallpaper/random-wallpaper.sh")
 awful.spawn.once("polybar")
 -- awful.spawn.with_shell("lxpolkit") old version for nobara
 --awful.spawn.with_shell("/usr/lib/lxpolkit/lxpolkit")
-awful.spawn.with_shell("$HOME/scripts/mouse-speed/mouse_speed.sh") -- run mouse speed fix
+-- awful.spawn.with_shell("$HOME/scripts/mouse-speed/mouse_speed.sh") -- run mouse speed fix
 
 -- set rgb
 awful.spawn.with_shell("openrgb --startminimized -p blue")
 
 -- tag specific
-awful.spawn.once("discord")
-awful.spawn.once("spotify-launcher")
+-- awful.spawn.once("discord")
+-- awful.spawn.once("spotify-launcher")
