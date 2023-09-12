@@ -11,9 +11,11 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e66;
+  bg: #1e1e2e99;
   bg-alt: #585b7066;
   bg-selected: #31324466;
+  bg2:    #88C0D0CC;
+  bg3:    #88C0D0F2;
 
   fg: #cdd6f4;
   fg-alt: #7f849c;
@@ -28,17 +30,19 @@ configuration {
 window {
   width: 30%;
   background-color: @bg;
+  border-radius:  20px;
 }
 
 element {
   padding: 8 12;
   background-color: transparent;
   text-color: @fg-alt;
+  border-radius:  24px;
 }
 
 element selected {
   text-color: @fg;
-  background-color: @bg-selected;
+  background-color: @bg2;
 }
 
 element-text {
@@ -62,17 +66,23 @@ entry {
 inputbar {
   children: [prompt, entry];
   background-color: @bg;
+  border-radius:  24px;
+  border:         3px;
+  border-color:       @bg3;
 }
 
 listview {
-  background-color: @bg;
+  background-color: transparent;
+  border-radius:  24px;
   columns: 1;
   lines: 10;
+  padding: 15 0;
 }
 
 mainbox {
   children: [inputbar, listview];
   background-color: @bg;
+  padding:    12px;
 }
 
 prompt {
