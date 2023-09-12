@@ -3,7 +3,7 @@
 # Default values
 DIRECTORY="$HOME/Pictures/.wallpapers/painterly/"
 THRESHOLD=4000000
-MODEL_NAME="realesrgan-x4plus"
+MODEL_NAME="realesrgan-x4plus-anime"
 
 # Argument parsing using getopts
 while getopts ":d:t:n:" opt; do
