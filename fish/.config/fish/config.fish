@@ -20,3 +20,11 @@ if status is-interactive
 
 end
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/parker/anaconda3/bin/conda
+    eval /home/parker/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+
