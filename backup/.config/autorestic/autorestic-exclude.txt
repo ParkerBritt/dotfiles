@@ -1,0 +1,48 @@
+# Trash and Temporary Files
+.local/share/Trash/
+.cache/
+tmp/
+.tmp/
+
+# Web Browser Cache
+.mozilla/firefox/*.default*/Cache
+.mozilla/firefox/*.default*/cache2
+.cache/google-chrome/
+.cache/chromium/
+
+# Thumbnails
+.thumbnails/
+.cache/thumbnails/
+
+# Virtualization
+VirtualBox VMs/
+.local/share/containers/
+.local/share/virtualbox/
+.vmware/
+
+# Downloads (Only if treating as a temporary space)
+Downloads/
+
+# Games and Large Software
+.steam/
+.local/share/Steam/
+.minecraft/
+
+# Development Dependencies
+**/node_modules/
+# Add other dependency directories like Python's venv or Ruby's gems if you want to exclude them.
+
+# Backup Files (adjust this if you have specific backup paths in your home directory)
+# backup/
+
+# Other large software caches or libraries might be added as needed.
+
+# For venv in project root
+**/venv/
+
+# For .venv in project root
+**/.venv/
+
+# For a common directory approach
+.virtualenvs/
+

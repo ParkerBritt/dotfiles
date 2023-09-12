@@ -1,0 +1,27 @@
+version: 2
+
+locations:
+  home:
+    from:
+    - /home/parker
+    to:
+    - hdd
+    - remoteb2
+    cron: 0 */4 * * *
+    options:
+      forget:
+        keep-daily: 4
+        keep-last: 5
+        keep-monthly: 12
+        keep-weekly: 1
+        keep-yearly: 7
+      backup:
+        exclude-file: /home/parker/.config/autorestic/autorestic-exclude.txt
+
+backends:
+  hdd:
+    type: local
+    path: /mnt/backup-drive/restic-backup/
+  remoteb2:
+    type: b2
+    path: main-backup3404
