@@ -12,12 +12,14 @@ alias calc="qalc"
 alias yay="yay --color always"
 # alias clip="xsel -b"
 alias clip="wl-copy"
+alias clip-dir="pwd | clip"
 alias cal="calcure"
 alias dust-sum="dust -bd 0"
 alias film="cd /home/parker/Perforce/parker-arch/"
 alias banner='figlet -d ~/github/figlet-fonts/ -f "3d"'
 alias aliases="vim ~/.config/fish/aliases.fish"
 alias yay="yay --nodiffmenu"
+alias rec-region="slurp | xargs -I % wf-recorder -f ~/Downloads/screen-record.mp4 -g %"
 
 # vpn
 alias vpn="sudo wg"
