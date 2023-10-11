@@ -1,3 +1,4 @@
 *.env
-credentials.fish
+*credentials*
 *.lock*
+*-lock*

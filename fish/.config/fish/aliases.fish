@@ -1,7 +1,7 @@
 alias la='ls -a --icons'
 alias logout='qdbus org.kde.ksmserver /KSMServer logout 0 0 0'
 alias ll='eza -alh --icons'
-alias llatest='eza -alh -s created -r --icons'
+alias llatest='eza -alh -s created --icons'
 alias vim='nvim'
 alias top='bpytop'
 alias fetch='fastfetch --logo arch2'
@@ -15,11 +15,14 @@ alias clip="wl-copy"
 alias clip-dir="pwd | clip"
 alias cal="calcure"
 alias dust-sum="dust -bd 0"
-alias film="cd /home/parker/Perforce/parker-arch/"
 alias banner='figlet -d ~/github/figlet-fonts/ -f "3d"'
 alias aliases="vim ~/.config/fish/aliases.fish"
 alias yay="yay --nodiffmenu"
 alias rec-region="slurp | xargs -I % wf-recorder -f ~/Downloads/screen-record.mp4 -g %"
+alias pactivate="source venv/bin/activate.fish"
+# alias djv="tev"
+alias crash-houdini="killall -SEGV houdini-bin"
+alias film="cd ~/Perforce/y3-film/"
 
 # vpn
 alias vpn="sudo wg"
