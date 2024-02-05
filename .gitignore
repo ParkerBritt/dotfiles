@@ -2,3 +2,4 @@
 *credentials*
 *.lock*
 *-lock*
+tmux/.tmux/plugins
