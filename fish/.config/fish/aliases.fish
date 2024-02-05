@@ -1,17 +1,17 @@
 alias la='ls -a --icons'
 alias logout='qdbus org.kde.ksmserver /KSMServer logout 0 0 0'
 alias ll='eza -alh --icons'
-alias llatest='eza -alh -s created --icons'
+alias lc='eza -alh -s created --icons'
 alias vim='nvim'
-alias top='bpytop'
+alias top='btop'
 alias fetch='fastfetch --logo arch2'
 alias ..='cd ..'
 alias ls='eza --icons'
 alias files='nohup thunar > /dev/null 2>&1 &'
 alias calc="qalc"
 alias yay="yay --color always"
-# alias clip="xsel -b"
-alias clip="wl-copy"
+alias clip="xsel -b"
+# alias clip="wl-copy"
 alias clip-dir="pwd | clip"
 alias cal="calcure"
 alias dust-sum="dust -bd 0"
@@ -22,7 +22,14 @@ alias rec-region="slurp | xargs -I % wf-recorder -f ~/Downloads/screen-record.mp
 alias pactivate="source venv/bin/activate.fish"
 # alias djv="tev"
 alias crash-houdini="killall -SEGV houdini-bin"
+alias ftodo="vim /home/parker/Perforce/y3-film/pipeline/todo.txt"
+alias peek="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=peek com.uploadedlobster.peek"
+
+# Film
 alias film="cd ~/Perforce/y3-film/"
+alias fpackage="cd ~/Perforce/y3-film/pipeline/packages/2AM/houdini"
+alias fdev="cd ~/Perforce/y3-film/pipeline/development/cog_software"
+alias ficons="cd ~/Perforce/y3-film/pipeline/development/cog_software/cog_vfx/assets/icons"
 
 # vpn
 alias vpn="sudo wg"

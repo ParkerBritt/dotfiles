@@ -16,15 +16,17 @@ if status is-interactive
 
     rand-colorscript
 
-    source /usr/share/autojump/autojump.fish
+    # source /usr/share/autojump/autojump.fish
 
+    # start tmux if not in session
+    if not set -q TMUX
+        # Start TMUX session. You can customize the command with options if needed
+        exec tmux
+    end
 end
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# if test -f /home/parker/anaconda3/bin/conda
-#     eval /home/parker/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# end
+# eval /usr/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
