@@ -24,6 +24,7 @@ alias pactivate="source venv/bin/activate.fish"
 alias crash-houdini="killall -SEGV houdini-bin"
 alias ftodo="vim /home/parker/Perforce/y3-film/pipeline/todo.txt"
 alias peek="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=peek com.uploadedlobster.peek"
+alias keeb="cd ~/github/qmk_firmware/keyboards/lily58/keymaps/parker/"
 
 # Film
 alias film="cd ~/Perforce/y3-film/"
