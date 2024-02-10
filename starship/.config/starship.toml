@@ -22,6 +22,7 @@ $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
+\n[ ](fg:#86BBD8)\
 """
 command_timeout = 5000
 # Disable the blank line at the start of the prompt
@@ -47,6 +48,10 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
+"~/Perforce/y3-film" = " "
+".config" = " conf"
+"dotfiles" = " dot"
+"cog_software" = " cog"
 # Keep in mind that the order matters. For example:
 # "Important Documents" = "  "
 # will not be replaced, because "Documents" was already substituted before.
