@@ -25,6 +25,9 @@ if status is-interactive
     end
 end
 
+# zoxide
+zoxide init fish | source
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # eval /usr/bin/conda "shell.fish" "hook" $argv | source
