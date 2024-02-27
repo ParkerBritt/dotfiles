@@ -3,3 +3,4 @@
 *.lock*
 *-lock*
 tmux/.tmux/plugins
+zjstatus.wasm

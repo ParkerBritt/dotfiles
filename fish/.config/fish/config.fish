@@ -20,9 +20,12 @@ if status is-interactive
 
     # start tmux if not in session
     if not set -q TMUX
-        # Start TMUX session. You can customize the command with options if needed
-        exec tmux
+        # exec tmux
     end
+
+    # zellij
+    set -gx ZELLIJ_AUTO_EXIT true
+    eval (zellij setup --generate-auto-start fish | string collect)
 end
 
 # zoxide
