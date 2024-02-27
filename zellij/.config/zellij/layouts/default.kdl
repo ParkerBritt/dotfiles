@@ -50,20 +50,20 @@ layout {
             /* mode_prompt        "#[bg=#89B4FA] {name} " */
             /* mode_tmux          "#[bg=#ffc387] {name} " */
             // rounded modes
-            mode_normal        "#[bg=#89B4FA]  #[fg=#89B4FA]"
-            mode_locked        "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_resize        "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_pane          "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_tab           "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_scroll        "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_enter_search  "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_search        "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_rename_tab    "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_rename_pane   "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_session       "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_move          "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_prompt        "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
-            mode_tmux          "#[bg=#89B4FA]  {name}#[fg=#89B4FA]"
+            mode_normal        "#[bg=#33658A]  #[fg=#33658A]"
+            mode_locked        "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_resize        "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_pane          "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_tab           "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_scroll        "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_enter_search  "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_search        "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_rename_tab    "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_rename_pane   "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_session       "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_move          "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_prompt        "#[bg=#33658A]  {name}#[fg=#33658A]"
+            mode_tmux          "#[bg=#33658A]  {name}#[fg=#33658A]"
         }
     }
 }
