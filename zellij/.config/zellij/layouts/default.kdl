@@ -66,4 +66,8 @@ layout {
             mode_tmux          "#[bg=#33658A]  {name}#[fg=#33658A]"
         }
     }
+
+    /* pane size=2 borderless=true { */
+    /*     plugin location="zellij:status-bar" */
+    /* } */
 }
