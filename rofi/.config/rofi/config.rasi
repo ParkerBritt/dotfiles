@@ -28,9 +28,9 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 20%;
   background-color: @bg;
-  border-radius:  30px;
+  border-radius:  24px;
   anchor: north;
   y-offset: -230;
   location: center;
@@ -86,13 +86,13 @@ listview {
   fixed-height: false;
   require-input: true;
   lines: 8;
-  padding: 15 0;
+  padding: 6 0 3 0;
 }
 
 mainbox {
   children: [inputbar, listview];
   background-color: @bg;
-  padding:    12px;
+  padding:    3 3 3 3 px;
 }
 
 prompt {
