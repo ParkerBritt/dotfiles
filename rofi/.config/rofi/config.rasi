@@ -1,5 +1,5 @@
 configuration {
-  display-drun: "Applications:";
+  display-drun: "";
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font Medium 10";
@@ -30,7 +30,10 @@ configuration {
 window {
   width: 30%;
   background-color: @bg;
-  border-radius:  10px;
+  border-radius:  30px;
+  anchor: north;
+  y-offset: -230;
+  location: center;
 }
 
 element {
@@ -58,7 +61,11 @@ element-icon {
 }
 
 entry {
-  padding: 12;
+  font: "JetBrainsMono Nerd Font Bold 12";
+  blink: false;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  padding: 8 0;
   background-color: @bg-alt;
   text-color: @fg;
 }
@@ -75,7 +82,10 @@ listview {
   background-color: transparent;
   border-radius:  24px;
   columns: 1;
-  lines: 10;
+  fixed-rows: false;
+  fixed-height: false;
+  require-input: true;
+  lines: 8;
   padding: 15 0;
 }
 
