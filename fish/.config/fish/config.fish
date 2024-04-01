@@ -10,8 +10,14 @@ set fish_cursor_replace_one underscore
 
 if status is-interactive
     xset r rate 150 25
+
     # Commands to run in interactive sessions can go here
     source $HOME/.config/fish/aliases.fish
+
+    # zellij
+    set -gx ZELLIJ_AUTO_EXIT true
+    eval (zellij setup --generate-auto-start fish | string collect)
+
     starship init fish | source
 
     rand-colorscript
@@ -19,17 +25,14 @@ if status is-interactive
     # source /usr/share/autojump/autojump.fish
 
     # start tmux if not in session
-    if not set -q TMUX
+    # if not set -q TMUX
         # exec tmux
-    end
+    # end
 
-    # zellij
-    set -gx ZELLIJ_AUTO_EXIT true
-    eval (zellij setup --generate-auto-start fish | string collect)
+    # zoxide
+    zoxide init fish | source
 end
 
-# zoxide
-zoxide init fish | source
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
