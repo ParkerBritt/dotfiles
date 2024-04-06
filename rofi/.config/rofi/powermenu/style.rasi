@@ -1,20 +1,11 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
+@import                          "../shared/colors.rasi"
+@import                          "../shared/fonts.rasi"
 
 /*
 USE_BUTTONS=YES
@@ -27,21 +18,19 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       530px;
+    width:                       800px;
     x-offset:                    0px;
-    y-offset:                    20px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
-    padding:                     15px;
+    padding:                     0px;
     border:                      0px solid;
-    border-radius:               5px;
-    border-color:                @selected;
+    border-radius:               0px;
+    border-color:                @bg-selected;
     cursor:                      "default";
-    border: 0px 0px 8px 0px;
-    border-color: #272727;
-    background-color: #303030;
+    background-color:            transparent;
 }
 
 /*****----- Main Box -----*****/
@@ -52,9 +41,9 @@ mainbox {
     padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @bg-selected;
     background-color:            transparent;
-    children:                    [ "listview" ];
+    children:                    [ "message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -65,9 +54,9 @@ inputbar {
     padding:                     0px;
     border:                      0px;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @bg-selected;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @fg;
     children:                    [ "textbox-prompt-colon", "prompt"];
 }
 
@@ -81,34 +70,33 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     12px 16px;
     border-radius:               0px;
-    background-color:            @urgent;
-    text-color:                  @background;
+    background-color:            @bg;
+    text-color:                  @bg;
 }
 prompt {
     enabled:                     true;
     padding:                     12px;
     border-radius:               0px;
-    background-color:            @active;
-    text-color:                  @background;
+    text-color:                  @bg;
 }
 
 /*****----- Message -----*****/
 message {
     enabled:                     true;
-    margin:                      0px;
+    margin:                      0px 200px;
     padding:                     15px;
     border:                      0px solid;
     border-radius:               15px;
-    border-color:                @selected;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    border-color:                @bg-selected;
+    background-color:            @bg;
+    text-color:                  @fg;
 }
 textbox {
-    background-color:            inherit;
+    background-color:            transparent;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @foreground;
+    placeholder-color:           @fg;
     blink:                       true;
     markup:                      true;
 }
@@ -116,9 +104,9 @@ error-message {
     padding:                     12px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    background-color:            @background;
-    text-color:                  @foreground;
+    border-color:                @bg-selected;
+    background-color:            @bg;
+    text-color:                  @fg;
 }
 
 /*****----- Listview -----*****/
@@ -138,10 +126,8 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  @fg;
     cursor:                      "default";
 }
 
@@ -150,19 +136,16 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     25px 0px;
+    padding:                     45px 10px;
     border:                      0px solid;
-    border-radius:               3px;
-    border-color:                @selected;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    border-radius:               20px;
+    border-color:                @bg-selected;
+    background-color:            @bg;
+    text-color:                  @fg-unselected;
     cursor:                      pointer;
-    border: 0px 0px 8px 0px;
-    border-color: #191c1d;
-    background-color: #1f2223;
 }
 element-text {
-    font:                        "JetBrainsMono Nerd Font 18";
+    font:                        "feather bold 32";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
@@ -170,9 +153,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            var(selected);
-    text-color:                  var(background);
-    border: 0px 0px 8px 0px;
-    border-color: #518554;
-    background-color: #689d6a;
+    background-color:            var(bg-selected);
+    text-color:                  @fg-selected;
 }
