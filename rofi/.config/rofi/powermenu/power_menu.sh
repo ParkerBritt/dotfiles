@@ -37,7 +37,8 @@ rofi_cmd() {
 	rofi -dmenu \
 		-p "Uptime: $uptime" \
 		-mesg "Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+		-theme ${dir}/${theme}.rasi \
+        -selected-row 2
 }
 
 # Confirmation CMD
@@ -60,7 +61,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$lock\n$reboot\n$shutdown\n$logout\n$suspend" | rofi_cmd
 }
 
 # Execute Command
