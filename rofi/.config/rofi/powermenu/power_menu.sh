@@ -1,23 +1,14 @@
 #!/usr/bin/env bash
 
 ## Original Author : Aditya Shakya (adi1090x)
-#
-## Current Author : Jackson Novak (Oglo12)
-#
-## Github : @adi1090x
-#
-## Codeberg : @Oglo12
-#
-## Rofi   : Power Menu
-#
-## Available Styles
-#
-## style-1   style-2   style-3   style-4   style-5
-## style-6   style-7   style-8   style-9   style-10
+## Current Author : Parker Britt (parkerbritt)
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu"
 theme='style'
+
+# Set Opacity
+export ROFI_BACKGROUND_OPACITY=0.9
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -77,7 +68,7 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			pkill -KILL -u $USER
+			logout
 		fi
 	else
 		exit 0

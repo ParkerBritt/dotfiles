@@ -26,3 +26,6 @@ set -gx film_root /home/parker/Perforce/y3-film
 # for nix package manager
 set -gx LOCALE_ARCHIVE /lib/locale/locale-archive
 set -gx NIXPKGS_ALLOW_UNFREE 1
+
+# rofi
+set -gx rofi_background_opacity 0.5

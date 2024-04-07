@@ -1,27 +1,16 @@
 * {
-  bg: #1e1e2eD9;
-  bg-alt: #585b70D9;
-  bg-selected: #88C0D0D9;
+  bg: rgba(30, 30, 46, ${ROFI_BACKGROUND_OPACITY});
+  bg-alt: rgba(88, 91, 112, ${ROFI_BACKGROUND_OPACITY});
+  bg-selected: #88C0D0;
 
   fg: #cdd6f4;
   fg-alt: #7f849c;
 
   fg-selected: #cdd6f4;
   fg-unselected: #7f849c;
-
-
   
   border: 0;
   margin: 0;
   padding: 0;
   spacing: 0;
 }
-
-// * {
-//     background:     #1E2127FF;
-//     background-alt: #282B31FF;
-//     foreground:     #FFFFFFFF;
-//     selected:       #61AFEFFF;
-//     active:         #98C379FF;
-//     urgent:         #E06C75FF;
-// }
