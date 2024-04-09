@@ -1,7 +1,7 @@
 * {
   bg: rgba(30, 30, 46, ${ROFI_BACKGROUND_OPACITY});
   bg-alt: rgba(88, 91, 112, ${ROFI_BACKGROUND_OPACITY});
-  bg-selected: #88C0D0;
+  bg-selected: #6796d0;
 
   fg: #cdd6f4;
   fg-alt: #7f849c;
