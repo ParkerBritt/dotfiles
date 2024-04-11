@@ -15,12 +15,14 @@ def expand_data():
 expanded_data = expand_data()
 if(not rofi_data):
     print("\0data\x1fstage:shot_ver")
-    print("\n".join(os.listdir(render_dir)))
+    dirs = [element+"\0icon\x1ffolder" for element in os.listdir(render_dir)]
+    print("\n".join(dirs))
 elif expanded_data["stage"]=="shot_ver":
     shot_num = sys.argv[1]
     print(f"\0data\x1fstage:passes,shot_num:{shot_num}")
     path = os.path.join(render_dir, shot_num,"3D_render")
-    print("\n".join(os.listdir(path)))
+    dirs = [element+"\0icon\x1ffolder" for element in os.listdir(path)]
+    print("\n".join(dirs))
 elif expanded_data["stage"]=="passes":
     version = sys.argv[1]
     shot_num = expanded_data["shot_num"]
