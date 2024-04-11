@@ -24,8 +24,31 @@ elif expanded_data["stage"]=="shot_ver":
     dirs = [element+"\0icon\x1ffolder" for element in os.listdir(path)]
     print("\n".join(dirs))
 elif expanded_data["stage"]=="passes":
+    import re
+
     version = sys.argv[1]
     shot_num = expanded_data["shot_num"]
     path = os.path.join(render_dir, shot_num, "3D_render", version)
-    print("\n".join(os.listdir(path)))
+    pattern = re.compile(r"(^[\S\s]+?)_(\d{4}).exr$")
+    unfiltered_files = os.listdir(path)
+    # unique_files = {}
+    unique_files = set()
 
+    list_items = []
+
+    for file in unfiltered_files:
+        match = pattern.match(file)
+        if match and not match.group(1) in unique_files:
+            # unique_files[match.group(1)] = match.group(2)
+            file_name = match.group(1)
+            file_digit = match.group(2)
+            file_path = "\0info\x1f"+os.path.join(path,match.group(0))
+            icon = "\x1ficon\x1fdjv"
+            list_items.append(file_name+file_path+icon)
+            unique_files.add(file_name)
+    print("\0data\x1fstage:open_file")
+    print("\n".join(list_items))
+elif expanded_data["stage"]=="open_file":
+    import subprocess
+    file_path = os.getenv("ROFI_INFO")
+    subprocess.Popen(["djv", file_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
