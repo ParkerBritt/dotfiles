@@ -12,12 +12,17 @@ def expand_data():
         expanded_dict[key] = value
     return expanded_dict
 
+def set_prompt(prompt):
+    print(f"\0prompt\x1f{prompt}")
+
 expanded_data = expand_data()
 if(not rofi_data):
+    set_prompt("Renders Shot")
     print("\0data\x1fstage:shot_ver")
     dirs = [element+"\0icon\x1ffolder" for element in os.listdir(render_dir)]
     print("\n".join(dirs))
 elif expanded_data["stage"]=="shot_ver":
+    set_prompt("Render Version")
     shot_num = sys.argv[1]
     print(f"\0data\x1fstage:passes,shot_num:{shot_num}")
     path = os.path.join(render_dir, shot_num,"3D_render")
@@ -26,6 +31,7 @@ elif expanded_data["stage"]=="shot_ver":
 elif expanded_data["stage"]=="passes":
     import re
 
+    set_prompt("Render Pass")
     version = sys.argv[1]
     shot_num = expanded_data["shot_num"]
     path = os.path.join(render_dir, shot_num, "3D_render", version)
