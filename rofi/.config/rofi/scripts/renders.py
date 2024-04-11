@@ -29,8 +29,9 @@ elif expanded_data["stage"]=="shot_ver":
     dirs = [element+"\0icon\x1ffolder" for element in os.listdir(path)]
     print("\n".join(dirs))
 elif expanded_data["stage"]=="passes":
-    import re
+    import re, subprocess
 
+    print(f"\0data\x1fstage:open_file")
     set_prompt("Render Pass")
     version = sys.argv[1]
     shot_num = expanded_data["shot_num"]
@@ -42,38 +43,34 @@ elif expanded_data["stage"]=="passes":
 
     file_data = {}
 
+    fls_files = subprocess.run("fls", cwd=path, capture_output=True, text=True).stdout
+    pattern = re.compile(r"^(?P<name>[\S\s]+?)_\*\*\*\*.exr@(?P<frame_start>\d{4})-?(?P<frame_end>\d{4})?")
     try:
-        for file in unfiltered_files:
+        for file in fls_files.split("\n"):
             match = pattern.match(file)
             if not match:
                 continue
 
-            file_name = match.group(1)
-            file_digit = match.group(2)
-            if not file_name in file_data:
-                # unique_files[match.group(1)] = match.group(2)
-                file_path = "\0info\x1f"+os.path.join(path,match.group(0))
-                icon = "\x1ficon\x1fdjv"
-                file_data[file_name] = {"file_path":file_path, "icon":icon, "digit_start": int(file_digit), "digit_end": int(file_digit)}
-            else:
-                file_data[file_name]["digit_end"]+=1
+            file_name = match.group("name")
+            frame_start = match.group("frame_start")
+            frame_end = match.group("frame_end")
+            
+            # file full name
+            file_full_name_match = re.search(r"(?P<name>^[\S\s]+?_)\*{4}(?P<ext>.exr)", file)
+            file_full_name = file_full_name_match.group("name")+frame_start+file_full_name_match.group("ext")
 
-        print("\0data\x1fstage:open_file")
+            file_path = "\0info\x1f"+os.path.join(path,file_full_name)
+            digits = frame_start
+            if frame_end:
+                digits = digits+"-"+frame_end
+            icon = "\x1ficon\x1fdjv"
+            print(file_name+" "+digits+file_path+icon)
 
-        list_items = []
-        def padzero(pad_val):
-            return str(pad_val).zfill(4)
-
-        for file_name, values in file_data.items():
-            file_path = values["file_path"]
-            icon = values["icon"]
-            digits = "("+padzero(values['digit_start'])+"-"+padzero(values['digit_end'])+")"
-            list_items.append(file_name+" "+digits+file_path+icon)
-        print("\n".join(list_items))
     except Exception as e:
         print(e)
-
+    
 elif expanded_data["stage"]=="open_file":
     import subprocess
     file_path = os.getenv("ROFI_INFO")
+    # print(file_path)
     subprocess.Popen(["djv", file_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
