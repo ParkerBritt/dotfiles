@@ -70,7 +70,7 @@ listview {
   columns: 1;
   fixed-rows: false;
   fixed-height: false;
-  require-input: true;
+  // require-input: true;
   lines: 8;
   padding: 6 0 3 0;
 }
