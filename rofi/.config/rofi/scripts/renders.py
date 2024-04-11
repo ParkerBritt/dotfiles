@@ -38,22 +38,41 @@ elif expanded_data["stage"]=="passes":
     pattern = re.compile(r"(^[\S\s]+?)_(\d{4}).exr$")
     unfiltered_files = os.listdir(path)
     # unique_files = {}
-    unique_files = set()
+    # unique_files = set()
 
-    list_items = []
+    file_data = {}
 
-    for file in unfiltered_files:
-        match = pattern.match(file)
-        if match and not match.group(1) in unique_files:
-            # unique_files[match.group(1)] = match.group(2)
+    try:
+        for file in unfiltered_files:
+            match = pattern.match(file)
+            if not match:
+                continue
+
             file_name = match.group(1)
             file_digit = match.group(2)
-            file_path = "\0info\x1f"+os.path.join(path,match.group(0))
-            icon = "\x1ficon\x1fdjv"
-            list_items.append(file_name+file_path+icon)
-            unique_files.add(file_name)
-    print("\0data\x1fstage:open_file")
-    print("\n".join(list_items))
+            if not file_name in file_data:
+                # unique_files[match.group(1)] = match.group(2)
+                file_path = "\0info\x1f"+os.path.join(path,match.group(0))
+                icon = "\x1ficon\x1fdjv"
+                file_data[file_name] = {"file_path":file_path, "icon":icon, "digit_start": int(file_digit), "digit_end": int(file_digit)}
+            else:
+                file_data[file_name]["digit_end"]+=1
+
+        print("\0data\x1fstage:open_file")
+
+        list_items = []
+        def padzero(pad_val):
+            return str(pad_val).zfill(4)
+
+        for file_name, values in file_data.items():
+            file_path = values["file_path"]
+            icon = values["icon"]
+            digits = "("+padzero(values['digit_start'])+"-"+padzero(values['digit_end'])+")"
+            list_items.append(file_name+" "+digits+file_path+icon)
+        print("\n".join(list_items))
+    except Exception as e:
+        print(e)
+
 elif expanded_data["stage"]=="open_file":
     import subprocess
     file_path = os.getenv("ROFI_INFO")
