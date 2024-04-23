@@ -1,7 +1,7 @@
 alias la='ls -a --icons'
 alias logout='qdbus org.kde.ksmserver /KSMServer logout 0 0 0'
 alias ll='eza -alh --icons'
-alias lc='eza -alh -s created --icons'
+alias lc='eza -alh -snew --icons'
 alias vim='nvim'
 alias top='btop'
 alias fetch='fastfetch'
@@ -48,3 +48,4 @@ alias back-local="restic --repository-file ~/.config/restic/local-credentials/re
 
 # git
 alias gs="git status"
+

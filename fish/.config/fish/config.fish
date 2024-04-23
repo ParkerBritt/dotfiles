@@ -13,6 +13,7 @@ if status is-interactive
 
     # Commands to run in interactive sessions can go here
     source $HOME/.config/fish/aliases.fish
+    source $HOME/.config/fish/keybinds.fish
 
     # zellij
     set -gx ZELLIJ_AUTO_EXIT true
