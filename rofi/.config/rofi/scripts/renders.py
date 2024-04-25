@@ -16,6 +16,16 @@ def set_prompt(prompt):
     print(f"\0prompt\x1f{prompt}")
 
 expanded_data = expand_data()
+
+# constant arguments
+print(f"\0new-selection\x1f0")
+
+# retv = os.getenv("ROFI_RETV")
+# if(retv == "10"):
+#     print("FOO")
+#     exit()
+# print(retv)
+
 if(not rofi_data):
     set_prompt("Renders Shot")
     print("\0data\x1fstage:shot_ver")
