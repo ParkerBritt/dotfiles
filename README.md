@@ -18,3 +18,5 @@ I've experimented with my environment for various reasons so it might be a bit a
 ![image](screenshots/neovim.png)
 ### Hyprland
 ![image](screenshots/hyprland.png)
+### KDE
+![image](screenshots/kde_01.png)
