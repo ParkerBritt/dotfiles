@@ -1,6 +1,21 @@
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<CR>"
+
 vim.o.timeoutlen = 300
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.o.clipboard = 'unnamedplus'
+
+vim.o.number = true
+vim.o.relativenumber = true
+
+vim.o.undofile = true
+
+vim.opt.tabstop = 4       -- Set the number of columns for a tab
+vim.opt.shiftwidth = 4    -- Set the number of spaces per indentation level
+vim.opt.softtabstop = 4   -- Number of spaces that a <Tab> counts for while performing editing operations
+vim.opt.expandtab = true  -- Use spaces instead of tabs
 
 lvim.plugins = {
 	{
@@ -10,5 +25,14 @@ lvim.plugins = {
 	  keys = { -- load the plugin only when using it's keybinding:
 		{ "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
 	  },
+	},
+	{
+		"ethanholz/nvim-lastplace",
+		config = true,
+		opts = {
+			lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+			lastplace_ignore_filetype = { "gitcommit", "gitrebase", "svn", "hgcommit" },
+			lastplace_open_folds = true,
+		},
 	},
 }
