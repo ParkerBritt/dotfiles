@@ -11,6 +11,7 @@ alias files='nohup thunar > /dev/null 2>&1 &'
 alias calc="qalc"
 alias yay="yay --color always"
 alias clip="xsel -b"
+alias python="python3.11"
 # alias clip="wl-copy"
 alias clip-dir="pwd | clip"
 alias cal="calcure"
@@ -49,3 +50,6 @@ alias back-local="restic --repository-file ~/.config/restic/local-credentials/re
 # git
 alias gs="git status"
 
+# go up
+alias ...='cd ../..'
+alias ....='cd ../../..'
