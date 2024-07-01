@@ -8,6 +8,10 @@ end
 
 set -gx PATH /opt/hfs19.5.605/bin $PATH
 
+# rez
+set -gx PATH /home/parker/programs/rez/bin/rez $PATH
+# source /home/parker/programs/rez/completion/complete.fish
+
 if test -f ~/.config/fish/credentials.fish
     source ~/.config/fish/credentials.fish
 end
