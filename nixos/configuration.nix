@@ -167,6 +167,8 @@
     wget
     trash-cli
     gnome.gdm
+    fastfetch
+    eza
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
