@@ -108,6 +108,7 @@
     trash-cli
     fastfetch
     eza
+    unzip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
