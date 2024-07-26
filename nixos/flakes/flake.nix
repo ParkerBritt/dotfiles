@@ -1,31 +1,25 @@
 {
-  description = "A very basic flake";
+
+  description = "flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "nixpkgs/23.11";
   };
 
-  outputs = { self, nixpkgs }: {
-  	nixosConfiguration.nixos = nixpkgs.lib.nixosSystem {
-		modules = [
-
-		];
-
-	  environment.systemPackages = with nixpkgs; [
-	    neovim
-	    lunarvim
-	    hyprland
-	    git
-	    stow
-	    alacritty
-	    fish
-	    starship
-	    wget
-	    trash-cli
-	    gnome.gdm
-	    fastfetch
-	    eza
-	  ];
-	};
+  outputs = {self,nixpkgs,home-manager, ...}:
+    let
+      lib = nixpkgs.lib;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+    nixosConfigurations = {
+      nixos = lib.nixosSystem {
+      inherit system;
+      modules = [
+      ./configuration.nix 
+      ];
+      };
+    };
   };
+
 }
