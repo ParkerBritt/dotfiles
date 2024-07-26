@@ -2,6 +2,7 @@
 *credentials*
 *.lock*
 *-lock*
+!flake.lock
 tmux/.tmux/plugins
 zjstatus.wasm
 *secrets*
