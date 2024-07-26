@@ -101,7 +101,13 @@
     lunarvim
     xclip
     fastfetch
-  #  wget
+    alacritty
+    fish
+    starship
+    wget
+    trash-cli
+    fastfetch
+    eza
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
