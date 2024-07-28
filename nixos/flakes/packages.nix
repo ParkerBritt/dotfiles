@@ -20,5 +20,6 @@
     fzf
     rofi
     zoxide
+    gparted
   ];
 }
