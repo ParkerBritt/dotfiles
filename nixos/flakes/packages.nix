@@ -22,9 +22,11 @@
     rofi
     zoxide
     gparted
-    wt1-shell-color-scripts
+    dwt1-shell-color-scripts
     dust
     discord
+    shell-gpt
+    btop
   ];
 
   # enable packages
