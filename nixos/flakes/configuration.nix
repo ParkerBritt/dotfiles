@@ -85,6 +85,7 @@
     isNormalUser = true;
     description = "Parker";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
     packages = with pkgs; [
       firefox
       kate

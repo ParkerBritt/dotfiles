@@ -10,7 +10,6 @@ set fish_cursor_replace_one underscore
 
 if status is-interactive
     xset r rate 150 25
-    echo "hello world"
 
     # Commands to run in interactive sessions can go here
     source $HOME/.config/fish/aliases.fish

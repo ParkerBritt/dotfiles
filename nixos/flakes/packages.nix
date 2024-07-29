@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  # install packages
   environment.systemPackages = with pkgs; [
     neovim
     stow
@@ -21,5 +22,11 @@
     rofi
     zoxide
     gparted
+    wt1-shell-color-scripts
+    dust
   ];
+
+  # enable packages
+  programs.fish.enable = true;
 }
+
