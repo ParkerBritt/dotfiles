@@ -24,6 +24,7 @@
     gparted
     wt1-shell-color-scripts
     dust
+    discord
   ];
 
   # enable packages
