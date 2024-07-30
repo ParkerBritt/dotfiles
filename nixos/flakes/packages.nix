@@ -23,9 +23,9 @@
     zoxide
     gparted
     dwt1-shell-color-scripts
-    dust
+    du-dust
     discord
-    shell-gpt
+    # shell-gpt
     btop
   ];
 
