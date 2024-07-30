@@ -16,7 +16,21 @@
       nixos = lib.nixosSystem {
           inherit system;
           modules = [
-          ./configuration.nix 
+              ./configuration.nix 
+          ];
+      };
+      kde = lib.nixosSystem {
+          inherit system;
+          modules = [
+              ./configuration.nix 
+              ./environments/kde.nix
+          ];
+      };
+      hypr = lib.nixosSystem {
+          inherit system;
+          modules = [
+              ./configuration.nix 
+              ./environments/hyprland.nix
           ];
       };
     };
