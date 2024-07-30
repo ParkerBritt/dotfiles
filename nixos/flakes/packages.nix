@@ -25,9 +25,10 @@
     dwt1-shell-color-scripts
     du-dust
     discord
-    # shell-gpt
+    shell_gpt
     btop
     libqalculate
+    kitty
   ];
 
   # enable packages
