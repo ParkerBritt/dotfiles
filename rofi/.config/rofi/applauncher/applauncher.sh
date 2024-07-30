@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 dir="$HOME/.config/rofi/applauncher"
 theme='style'
 export ROFI_BACKGROUND_OPACITY=0.5

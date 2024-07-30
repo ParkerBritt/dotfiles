@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+    imports = [
+        ./wayland.nix
+    ];
     environment.systemPackages = with pkgs; [
         gnome.gdm
         hyprland

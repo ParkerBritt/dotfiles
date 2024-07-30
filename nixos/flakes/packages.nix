@@ -19,7 +19,6 @@
     zellij
     yazi
     fzf
-    rofi
     zoxide
     gparted
     dwt1-shell-color-scripts
