@@ -3,7 +3,7 @@
   description = "flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/23.11";
+    nixpkgs.url = "nixpkgs/24.05";
   };
 
   outputs = {self,nixpkgs,home-manager, ...}:

@@ -27,6 +27,7 @@
     discord
     # shell-gpt
     btop
+    libqalculate
   ];
 
   # enable packages
