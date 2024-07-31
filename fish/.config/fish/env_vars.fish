@@ -16,7 +16,7 @@ if test -f ~/.config/fish/credentials.fish
     source ~/.config/fish/credentials.fish
 end
 
-set -gx EDITOR nvim
+set -gx EDITOR lvim
 set -gx OPENSSL_ia32cap ~0x200000200000000 # titanfall2 fix
 
 set -gx XDG_DATA_DIRS /home/parker/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:$XDG_DATA_DIRS
