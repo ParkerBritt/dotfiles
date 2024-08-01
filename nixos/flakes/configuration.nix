@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./fonts.nix
       ./packages/general.nix
+      ./packages/fish.nix
     ];
 
   # Bootloader.

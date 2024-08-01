@@ -9,7 +9,6 @@
     xclip
     fastfetch
     alacritty
-    fish
     starship
     wget
     trash-cli
@@ -29,8 +28,5 @@
     libqalculate
     kitty
   ];
-
-  # enable packages
-  programs.fish.enable = true;
 }
 
