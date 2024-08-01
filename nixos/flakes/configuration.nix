@@ -2,14 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./fonts.nix
-      ./packages.nix
+      ./packages/general.nix
     ];
 
   # Bootloader.
@@ -29,20 +29,24 @@
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
+i18n = {
+    supportedLocales = [
+        "C.UTF-8/UTF-8"
+        "en_US.UTF-8/UTF-8"
+    ];
+    defaultLocale = "en_US.UTF-8";
+    # extraLocaleSettings = {
+    #     LC_ADDRESS = "en_US.UTF-8";
+    #     LC_IDENTIFICATION = "en_US.UTF-8";
+    #     LC_MEASUREMENT = "en_US.UTF-8";
+    #     LC_MONETARY = "en_US.UTF-8";
+    #     LC_NAME = "en_US.UTF-8";
+    #     LC_NUMERIC = "en_US.UTF-8";
+    #     LC_PAPER = "en_US.UTF-8";
+    #     LC_TELEPHONE = "en_US.UTF-8";
+    #     LC_TIME = "en_US.UTF-8";
+    # };
+};
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -81,7 +85,7 @@
     isNormalUser = true;
     description = "Parker";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
+    # shell = pkgs.fish;
     packages = with pkgs; [
       firefox
       kate

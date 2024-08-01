@@ -7,6 +7,7 @@
         gnome.gdm
         hyprland
         wayland
+        hyprpaper
         wl-clipboard
     ];
 
