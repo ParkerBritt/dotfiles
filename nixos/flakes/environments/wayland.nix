@@ -5,5 +5,6 @@
     glibcLocales
     waybar
     pavucontrol
+    swww
   ];
 }
