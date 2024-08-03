@@ -49,6 +49,8 @@ i18n = {
     # };
 };
 
+    # sets /bin to emulate $path
+    services.envfs.enable = true; 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

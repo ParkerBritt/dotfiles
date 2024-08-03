@@ -6,7 +6,7 @@
     programs.fish.enable = true;
 
     # login shell method
-    users.users.parker.shell= pkgs.fish;
+    users.users.parker.shell = pkgs.fish;
 
     # interactive shell method
     # programs.bash = {
