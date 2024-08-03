@@ -18,6 +18,7 @@
         "DroidSansMono"
         "Hermit"
         "Meslo"
+        "JetBrainsMono"
       ];})
     ];
 }
