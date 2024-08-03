@@ -33,3 +33,6 @@ set -gx film_root /home/parker/Perforce/y3-film
 
 # rofi
 set -gx rofi_background_opacity 0.5
+
+# distro icon
+set -gx DISTRO_ICON $(distro_icon)
