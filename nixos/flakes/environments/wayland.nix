@@ -2,9 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     rofi-wayland
-    glibcLocales
+    # glibcLocales
     waybar
     pavucontrol
     swww
+    swaynotificationcenter 
   ];
 }

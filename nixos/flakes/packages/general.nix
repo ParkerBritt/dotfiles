@@ -32,6 +32,7 @@
     jq
     unzip
     xclip
+    libnotify
   ];
 }
 
