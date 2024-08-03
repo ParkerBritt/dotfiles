@@ -6,18 +6,14 @@
     stow
     git
     lunarvim
-    xclip
     fastfetch
     alacritty
     starship
     wget
     trash-cli
     fastfetch
-    eza
-    unzip
     zellij
     yazi
-    fzf
     zoxide
     gparted
     dwt1-shell-color-scripts
@@ -27,6 +23,15 @@
     btop
     libqalculate
     kitty
+
+    # shell
+    eza
+    fzf
+
+    # utility
+    jq
+    unzip
+    xclip
   ];
 }
 
