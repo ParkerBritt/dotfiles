@@ -21,7 +21,7 @@
 		"4": "",
 		"5": "",
 		"active": "",
-		"default": "" 
+		"default": "" 
 	},
        "persistent-workspaces": {
          "*": [ 2, 3, 4, 5 ]
