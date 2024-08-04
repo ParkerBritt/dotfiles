@@ -2,8 +2,8 @@
     border: none;
     font-size: 14px;
     font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF" ;
-    min-height: 25px;
-    color: #7164ea
+    min-height: 23px;
+    color: rgb(210,200,255);
 }
 
 window#waybar {
@@ -17,22 +17,25 @@ window#waybar {
 
 .modules-right {
   padding-left: 5px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px 15px 15px 15px;
   margin-top: 2px;
-  background: #000000;
+  margin-right: 10px;
+  background: #1a1a1a;
 }
 
 .modules-center {
-  padding: 0 15px;
+  padding: 0 3px;
   margin-top: 2px;
   border-radius: 15px 15px 15px 15px;
-  background: #000000;
+  background: #1a1a1a;
 }
 
 .modules-left {
-  border-radius: 0 15px 15px 0;
+  border-radius: 15px 15px 15px 15px;
   margin-top: 2px;
-  background: #000000;
+  margin-left: 10px;
+  padding-right: 6px;
+  background: #1a1a1a;
 }
 
 #battery,
@@ -70,7 +73,7 @@ window#waybar {
 
 
 #clock{
-  color: #5fd1fa;
+  /* color: #5fd1fa; */
 }
 
 #battery.charging {
