@@ -14,7 +14,6 @@
   "hyprland/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
-		"0": "",
 		"1": "",
 		"2": "",
 		"3": "",
@@ -24,7 +23,7 @@
 		"default": "" 
 	},
        "persistent-workspaces": {
-         "*": [ 2, 3, 4, 5 ]
+         "*": [1, 2, 3, 4, 5 ]
        }
 },
 
