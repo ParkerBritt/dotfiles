@@ -9,8 +9,6 @@ set fish_cursor_replace_one underscore
 # User specific environment
 
 if status is-interactive
-    xset r rate 150 25
-
     # Commands to run in interactive sessions can go here
     source $HOME/.config/fish/aliases.fish
     source $HOME/.config/fish/keybinds.fish
