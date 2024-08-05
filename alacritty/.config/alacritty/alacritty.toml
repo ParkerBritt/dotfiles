@@ -45,8 +45,8 @@ family = "MesloLGMNerdFont"
 style = "Regular"
 
 [window]
-opacity = 0.8
+opacity = 0.9
 
 [window.padding]
 x = 10
-y = 6
+y = 10
