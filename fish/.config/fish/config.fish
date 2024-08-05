@@ -17,6 +17,7 @@ if status is-interactive
 
     # zellij
     set -gx ZELLIJ_AUTO_EXIT true
+    $HOME/.config/zellij/scripts/install-plugins.sh
     eval (zellij setup --generate-auto-start fish | string collect)
 
     starship init fish | source

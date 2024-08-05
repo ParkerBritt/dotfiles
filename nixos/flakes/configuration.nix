@@ -11,6 +11,7 @@
       ./fonts.nix
       ./packages/general.nix
       ./packages/fish.nix
+      ./activation-scripts.nix
     ];
 
   # Bootloader.
