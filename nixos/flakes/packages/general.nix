@@ -33,6 +33,10 @@
     unzip
     xclip
     libnotify
+    hdparm
+    glib
   ];
+
+  programs.dconf.enable = true;
 }
 
