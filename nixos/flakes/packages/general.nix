@@ -23,6 +23,7 @@
     btop
     libqalculate
     kitty
+    spotify
 
     # shell
     eza
@@ -35,6 +36,7 @@
     libnotify
     hdparm
     glib
+    light
   ];
 
   programs.dconf.enable = true;
