@@ -7,5 +7,9 @@
     pavucontrol
     swww
     swaynotificationcenter 
+    
+    # screenshot
+    grim
+    slurp
   ];
 }
