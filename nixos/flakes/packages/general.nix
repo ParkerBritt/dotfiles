@@ -37,6 +37,7 @@
     hdparm
     glib
     light
+    pamixer
   ];
 
   programs.dconf.enable = true;
