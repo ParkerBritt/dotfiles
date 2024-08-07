@@ -39,6 +39,12 @@
     light
     pamixer
     brightnessctl
+
+    # programming
+    python311Full
+    libgcc
+    gcc
+    cmake
   ];
 
   programs.dconf.enable = true;
