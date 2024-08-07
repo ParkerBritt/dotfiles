@@ -38,6 +38,7 @@
     glib
     light
     pamixer
+    brightnessctl
   ];
 
   programs.dconf.enable = true;
