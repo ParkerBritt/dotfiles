@@ -45,6 +45,8 @@
     libgcc
     gcc
     cmake
+
+    signal-desktop
   ];
 
   programs.dconf.enable = true;
