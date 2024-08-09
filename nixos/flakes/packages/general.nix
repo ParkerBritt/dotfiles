@@ -47,7 +47,7 @@
     libgcc
     gcc
     cmake
-
+    gnumake
   ];
 
   programs.dconf.enable = true;
