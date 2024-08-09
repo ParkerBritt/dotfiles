@@ -2,32 +2,34 @@
 {
   # install packages
   environment.systemPackages = with pkgs; [
+    # gui
+    alacritty
+    gparted
+    discord
+    shell-gpt
+    kitty
+    spotify
+    signal-desktop
+
+    # shell tool
+    du-dust
+    btop
+    fastfetch
+    dwt1-shell-color-scripts
+    eza
+    fzf
     neovim
     stow
     git
-    lunarvim
-    fastfetch
-    alacritty
+    zellij
     starship
     wget
     trash-cli
     fastfetch
-    zellij
     yazi
     zoxide
-    gparted
-    dwt1-shell-color-scripts
-    du-dust
-    discord
-    shell-gpt
-    btop
+    lunarvim
     libqalculate
-    kitty
-    spotify
-
-    # shell
-    eza
-    fzf
 
     # utility
     jq
@@ -46,7 +48,6 @@
     gcc
     cmake
 
-    signal-desktop
   ];
 
   programs.dconf.enable = true;
