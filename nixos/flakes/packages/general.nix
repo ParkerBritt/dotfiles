@@ -41,6 +41,7 @@
     light
     pamixer
     brightnessctl
+    cliphist
 
     # nix
     # nix-ld
