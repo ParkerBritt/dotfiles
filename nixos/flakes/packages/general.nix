@@ -30,6 +30,8 @@
     zoxide
     lunarvim
     libqalculate
+    gimp
+    lxappearance
 
     # utility
     jq
@@ -42,6 +44,7 @@
     pamixer
     brightnessctl
     cliphist
+    exiftool
 
     # nix
     # nix-ld
