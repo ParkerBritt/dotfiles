@@ -42,14 +42,20 @@
     pamixer
     brightnessctl
 
+    # nix
+    # nix-ld
+
     # programming
     python311Full
     libgcc
     gcc
     cmake
     gnumake
+    boost
   ];
 
   programs.dconf.enable = true;
+  # allow standard binaries to run in nix
+  programs.nix-ld.enable = true;
 }
 
