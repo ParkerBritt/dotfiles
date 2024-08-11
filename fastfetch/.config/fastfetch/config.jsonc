@@ -5,7 +5,11 @@
         "source": "~/.config/fastfetch/logos/parrot",
         "color": {
           "1": "38;5;6",
+        },
+        "padding": {
+            "top":   1,
         }
+
     },
     // "logo": {
     //     "type": "small",
@@ -17,10 +21,6 @@
         "separator": "  "
     },
     "modules": [
-        { // padding
-            "type": "custom",
-            "format": ""
-        },
         {
             "type": "custom", // HardwareStart
             "format": "╭─────────── \u001b[1mHardware Information\u001b[0m ───────────╮" // `\u001b` is `\033`, or `\e`
