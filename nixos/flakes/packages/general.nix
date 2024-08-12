@@ -32,6 +32,10 @@
     libqalculate
     gimp
     lxappearance
+    protonvpn-gui
+    qbittorrent
+    openvpn
+    wireguard-tools
 
     # utility
     jq
@@ -45,6 +49,7 @@
     brightnessctl
     cliphist
     exiftool
+    imv
 
     # nix
     # nix-ld
