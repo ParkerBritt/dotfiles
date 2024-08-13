@@ -50,6 +50,7 @@
     cliphist
     exiftool
     imv
+    bindfs
 
     # nix
     # nix-ld
