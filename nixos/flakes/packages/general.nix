@@ -36,6 +36,7 @@
     qbittorrent
     openvpn
     wireguard-tools
+    networkmanagerapplet
 
     # utility
     jq
@@ -55,6 +56,10 @@
 
     # nix
     # nix-ld
+
+    # theming
+    awf
+    nwg-look
 
     # programming
     python311Full
