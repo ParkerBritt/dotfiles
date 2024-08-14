@@ -11,6 +11,11 @@
     "return-type": "json"
   },
 
+"tray": {
+    "icon-size": 15,
+    "spacing": 4
+},
+
   "hyprland/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
