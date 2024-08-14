@@ -60,9 +60,9 @@ run_cmd() {
 	selected="$yes"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-            shutdown now
+            qdbus org.kde.Shutdown /Shutdown logoutAndShutdown
 		elif [[ $1 == '--reboot' ]]; then
-            reboot now
+            qdbus org.kde.Shutdown /Shutdown logoutAndReboot
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
