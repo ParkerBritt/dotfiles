@@ -51,6 +51,7 @@
     exiftool
     imv
     bindfs
+    tldr
 
     # nix
     # nix-ld
