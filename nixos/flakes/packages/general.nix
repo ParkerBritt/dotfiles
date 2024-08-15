@@ -56,6 +56,7 @@
 
     # nix
     # nix-ld
+    nix-index
 
     # theming
     awf
