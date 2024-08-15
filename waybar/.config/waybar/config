@@ -2,8 +2,22 @@
   "layer": "top", "position": "top",
   "modules-left": ["custom/logo", "clock"],
   "modules-center": [  "hyprland/workspaces"],
-  "modules-right": ["tray", "bluetooth", "pulseaudio", "network",  "battery" ],
+  "modules-right": ["group/tray_grp", "group/status_items" ],
   "reload_style_on_change":true,
+
+"group/tray_grp": {
+    "orientation": "horizontal",
+    "modules": [
+        "tray"
+    ]
+},
+
+"group/status_items": {
+    "orientation": "horizontal",
+    "modules": [
+        "bluetooth", "pulseaudio", "network",  "battery"
+    ]
+},
 
   "custom/logo": {
     "format": "{}",
