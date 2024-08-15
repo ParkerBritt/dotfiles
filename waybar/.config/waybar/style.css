@@ -109,7 +109,11 @@ tooltip label {
 }
 
 #battery.warning:not(.charging) {
+    padding-left: 6px;
+    margin-left: 3px;
+    padding-right: 0px;
     background-color: #ffbe61;
+    border-radius: 10px;
     color: black;
 }
 
