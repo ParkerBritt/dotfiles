@@ -37,6 +37,7 @@
     openvpn
     wireguard-tools
     networkmanagerapplet
+    zed-editor
 
     # utility
     jq
@@ -72,6 +73,7 @@
     cmake
     gnumake
     boost
+    clang-tools
   ];
 
   programs.dconf.enable = true;
