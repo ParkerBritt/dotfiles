@@ -35,4 +35,6 @@ set -gx NIXPKGS_ALLOW_UNFREE 1
 set -gx rofi_background_opacity 0.5
 
 # distro icon
+set -gx DISTRO_NAME $(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)
 set -gx DISTRO_ICON $(distro_icon)
+

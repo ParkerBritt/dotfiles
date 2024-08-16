@@ -53,3 +53,9 @@ alias gs="git status"
 # go up
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+# distro specific aliases
+if test "$DISTRO_NAME" = "nixos"
+    source $HOME/.config/fish/nix/aliases.fish    
+end
+
