@@ -1,0 +1,5 @@
+[pyprland]
+plugins = ["magnify"]
+
+[magnify]
+factor = 2

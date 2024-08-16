@@ -54,6 +54,9 @@
     bindfs
     tldr
 
+    # hyprland
+    pyprland
+
     # nix
     # nix-ld
     nix-index
