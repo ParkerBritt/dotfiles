@@ -1,5 +1,10 @@
 [pyprland]
-plugins = ["magnify"]
+plugins = ["scratchpads"]
 
-[magnify]
-factor = 2
+[scratchpads.term]
+animation = "fromTop"
+command = "alacritty --class main-dropterm"
+class = "main-dropterm"
+size = "80% 80%"
+max_size = "1920px 100%"
+
