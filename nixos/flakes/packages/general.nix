@@ -38,6 +38,7 @@
     wireguard-tools
     networkmanagerapplet
     zed-editor
+    steam
 
     # utility
     jq
