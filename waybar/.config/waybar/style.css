@@ -103,18 +103,23 @@ tooltip label {
   /* color: #5fd1fa; */
 }
 
-#battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
-#battery.warning:not(.charging) {
+#battery.charging, #battery.warning:not(.charging), #battery.critical:not(.charging){
     padding-left: 6px;
     margin-left: 3px;
     padding-right: 0px;
     background-color: #ffbe61;
     border-radius: 10px;
     color: black;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    color: black;
+    background-color: #ffbe61;
 }
 
 #battery.critical:not(.charging) {
