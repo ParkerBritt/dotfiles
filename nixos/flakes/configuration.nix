@@ -39,7 +39,7 @@
   services.blueman.enable = true;
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Europe/London";
 
 i18n = {
     supportedLocales = [
