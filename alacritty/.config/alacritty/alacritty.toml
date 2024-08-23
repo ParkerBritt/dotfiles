@@ -23,23 +23,8 @@ background = "0x1a1e26"
 foreground = "0xD8DEE9"
 
 [font]
+normal = { family = "MesloLGM Nerd Font", style = "Normal" }
 size = 12
-
-[font.bold]
-family = "MesloLGMNerdFont"
-style = "Bold"
-
-[font.bold_italic]
-family = "MesloLGMNerdFont"
-style = "Bold Italic"
-
-[font.italic]
-family = "MesloLGMNerdFont"
-style = "Italic"
-
-[font.normal]
-family = "MesloLGMNerdFont"
-style = "Regular"
 
 [window]
 opacity = 0.9
