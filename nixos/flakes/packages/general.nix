@@ -75,6 +75,7 @@
     gnumake
     boost
     clang-tools
+    nodePackages.live-server
   ];
 
   programs.dconf.enable = true;
