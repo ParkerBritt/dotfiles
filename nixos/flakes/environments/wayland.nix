@@ -11,5 +11,8 @@
     # screenshot
     grim
     slurp
+
+    # color picker
+    hyprpicker
   ];
 }
