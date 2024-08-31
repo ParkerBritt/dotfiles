@@ -38,7 +38,6 @@
     wireguard-tools
     networkmanagerapplet
     zed-editor
-    steam
 
     # utility
     jq
@@ -76,10 +75,12 @@
     boost
     clang-tools
     nodePackages.live-server
+
   ];
 
   programs.dconf.enable = true;
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
+  programs.steam.enable = true;
 }
 
