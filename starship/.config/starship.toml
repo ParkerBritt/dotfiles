@@ -1,13 +1,11 @@
 format = """
 [ ](bg:#33658A)\
-$os\
 $directory\
 $shell\
 $env_var\
 $username\
 $sudo\
 [ ](fg:#33658A)\
-\n[ ](white)\
 """
 
 right_format = """
@@ -83,8 +81,7 @@ $jobs\
 $status\
 $container\
 $battery\
-$time\
-[ ](bg:#33658A)\
+$os\
 """
 
 add_newline = true
@@ -99,7 +96,7 @@ format = "[$env_value]($style)"
 style = 'green italic'
 
 [os]
-disabled = true
+disabled = false
 style = "bg:#33658A"
 
 [os.symbols]
@@ -130,7 +127,7 @@ format = "[$user]($style) ▻ "
 disabled = false
 
 [directory]
-home_symbol = "󰋜"
+home_symbol = "󰋜 "
 truncation_length = 2
 # truncation_symbol = "▦ "
 # read_only = " ■"
