@@ -7,6 +7,7 @@ $env_var\
 $username\
 $sudo\
 [ ](fg:#33658A)\
+\n[ ](white)\
 """
 
 right_format = """
@@ -196,8 +197,8 @@ ahead = "[▲[${count}](bg:#33658A)](bg:#33658A)"
 behind = "[▽│[${count}](bold white)│](italic red)"
 diverged = "[◇ ▲┤[${ahead_count}](regular white)│▽┤[${behind_count}](regular white)│](italic bright-magenta)"
 untracked = "[󰦁 ${count}](bg:#33658A)"
-stashed = "[◦◫◦](bg:#33658A)"
-modified = "[●◦](bg:#33658A)"
+stashed = "[󰴮](bg:#33658A)"
+modified = "[󰷩 ${count}](bg:#33658A)"
 staged = "[ [$count](bg:#33658A)⎥](bg:#33658A)"
 renamed = "[◎◦](italic bright-blue)"
 deleted = "[✕](italic red)"
