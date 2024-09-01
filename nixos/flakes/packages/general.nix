@@ -11,6 +11,7 @@
     spotify
     signal-desktop
     vlc
+    libreoffice
 
     # shell tool
     du-dust
