@@ -10,6 +10,7 @@
     kitty
     spotify
     signal-desktop
+    vlc
 
     # shell tool
     du-dust
@@ -54,6 +55,8 @@
     imv
     bindfs
     tldr
+    imagemagick
+    ffmpeg-full
 
     # hyprland
     pyprland
@@ -82,5 +85,6 @@
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
+  virtualisation.docker.enable = true;
 }
 
