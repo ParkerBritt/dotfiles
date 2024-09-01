@@ -30,5 +30,5 @@ size = 12
 opacity = 0.9
 
 [window.padding]
-x = 10
-y = 10
+x = 3
+y = 0
