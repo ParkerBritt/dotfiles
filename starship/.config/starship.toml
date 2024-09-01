@@ -1,10 +1,10 @@
 format = """
+$sudo\
 [ ](bg:#33658A)\
 $directory\
 $shell\
 $env_var\
 $username\
-$sudo\
 [ ](fg:#33658A)\
 """
 
@@ -114,9 +114,9 @@ style = "bg:#33658A"
 symbol = ""
 
 [sudo]
-format = "[$symbol]($style)"
-style = "italic bright-purple"
-symbol = "◇┈"
+style = "bg:#244A66"
+format = "[$symbol]($style)[](fg:#244A66 bg:#33658A)"
+symbol = " "
 disabled = false
 
 [username]
@@ -177,13 +177,13 @@ threshold = 70
 style = "dimmed white"
 
 [git_branch]
-format = "[ $symbol $branch(:$remote_branch)]($style)"
+format = "[ $symbol $branch(:$remote_branch) ]($style)"
 symbol = "[](bg:#33658A)"
 style = "bg:#33658A"
 
 [git_status]
 style = "bg:#33658A"
-format = """([ $ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed]($style))"""
+format = """([$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed]($style))"""
 conflicted = "[◪◦](italic bright-magenta)"
 ahead = "[▲[${count}](bg:#33658A)](bg:#33658A)"
 behind = "[▽│[${count}](bold white)│](italic red)"
