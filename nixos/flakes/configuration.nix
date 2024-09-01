@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware/dell-laptop.nix
+      ./firewall.nix
       ./fonts.nix
       ./packages/general.nix
       ./packages/fish.nix
