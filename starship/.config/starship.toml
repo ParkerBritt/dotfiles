@@ -131,7 +131,7 @@ truncation_length = 2
 # truncation_symbol = "▦ "
 # read_only = " ■"
 style = "bg:#33658A"
-format = '[$path]($style)[$read_only]($read_only_style)'
+format = '[$read_only]($style)[$path]($style)'
 
 [directory.substitutions]
 "Documents" = "󰈙"
