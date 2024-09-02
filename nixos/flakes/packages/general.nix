@@ -58,6 +58,7 @@
     tldr
     imagemagick
     ffmpeg-full
+    vesktop
 
     # hyprland
     pyprland
