@@ -33,13 +33,13 @@
   "hyprland/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
-		"1": "",
-		"2": "",
-		"3": "",
-		"4": "",
-		"5": "",
-		"active": "",
-		"default": "" 
+		"1": "   ",
+		"2": "   ",
+		"3": "   ",
+		"4": "   ",
+		"5": "   ",
+		"active": "   ",
+		"default": "   " 
 	},
        "persistent-workspaces": {
          "*": [1, 2, 3, 4, 5 ]
@@ -73,8 +73,8 @@
 
 "network": {
       "format-wifi": "    ",
-      "format-ethernet":" ",
-      "format-disconnected": "",
+      "format-ethernet":"    ",
+      "format-disconnected": "    ",
       "tooltip-format": "{ipaddr}",
       "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
       "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
