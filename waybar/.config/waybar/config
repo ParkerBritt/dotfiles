@@ -72,7 +72,7 @@
  }, 
 
 "network": {
-      "format-wifi": " ",
+      "format-wifi": "    ",
       "format-ethernet":" ",
       "format-disconnected": "",
       "tooltip-format": "{ipaddr}",
@@ -141,7 +141,7 @@
  },
 
 "pulseaudio": {
-  "format": "{volume}% {icon}",
+  "format": "{icon}  <span size='9pt' weight='bold'>{volume}</span>",
   "format-bluetooth":"󰂰",
   "format-muted": "<span font='12'></span>",
   "format-icons": {
