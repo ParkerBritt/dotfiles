@@ -8,11 +8,13 @@
 window#waybar {
   background: transparent;
   margin: 5px;
- }
+}
+
 
 #custom-logo {
-  padding: 0 10px;
+  padding-right: 10px;
 }
+
 
 .modules-right {
   background: transparent;
@@ -51,6 +53,40 @@ window#waybar {
     background: rgba(26, 27, 38, 0.8);
     border-radius: 30px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.6);
+    transition-duration: 0.05s;
+}
+
+window#waybar.fullscreen .modules-left{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: rgba(26, 27, 38, 1);
+  border-radius: 10px;
+  box-shadow: 0px 0px;
+  margin-bottom: 4px;
+}
+window#waybar.fullscreen .modules-center{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: rgba(26, 27, 38, 1);
+  border-radius: 10px;
+  box-shadow: 0px 0px;
+  margin-bottom: 4px;
+}
+window#waybar.fullscreen #status_items{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: rgba(26, 27, 38, 1);
+  border-radius: 10px;
+  box-shadow: 0px 0px;
+  margin-bottom: 4px;
+}
+window#waybar.fullscreen #tray_grp{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: rgba(26, 27, 38, 1);
+  border-radius: 10px;
+  box-shadow: 0px 0px;
+  margin-bottom: 4px;
 }
 
 tooltip {
