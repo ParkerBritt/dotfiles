@@ -89,11 +89,10 @@
             "critical": 20,
             "very-critical": 10
         },
-        "format": "{icon}<span size='8pt'>{capacity}</span>",
-        "format-charging": "{capacity}% 󰂄 ",
-        "format-plugged": "{capacity}% 󰂄",
-        "format-alt": "{time} {icon}",
-            "format-icons": [
+        "format": "{icon}  <span size='9pt' weight='bold'>{capacity}</span>",
+        "format-charging": "󰂄  <span size='9pt' weight='bold'>{capacity}</span>",
+        "format-plugged": "󰂄  <span size='9pt' weight='bold'>{capacity}</span>",
+        "format-icons": [
           "󰁺",
           "󰁻",
           "󰁼",
