@@ -1,5 +1,6 @@
 lvim.keys.normal_mode["L"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["H"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 
 vim.o.timeoutlen = 300
 vim.g.mapleader = ' '
