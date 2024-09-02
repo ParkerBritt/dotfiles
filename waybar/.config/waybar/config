@@ -15,7 +15,7 @@
 "group/status_items": {
     "orientation": "horizontal",
     "modules": [
-        "bluetooth", "pulseaudio", "network",  "battery"
+        "pulseaudio", "network",  "battery"
     ]
 },
 
@@ -86,11 +86,12 @@
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 20
+            "critical": 20,
+            "very-critical": 10
         },
-        "format": "{capacity}%  {icon} ",
+        "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}% 󰂄 ",
-        "format-plugged": "{capacity}% 󰂄 ",
+        "format-plugged": "{capacity}% 󰂄",
         "format-alt": "{time} {icon}",
             "format-icons": [
           "󰁻",
