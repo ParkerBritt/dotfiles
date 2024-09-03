@@ -15,7 +15,7 @@
 "group/status_items": {
     "orientation": "horizontal",
     "modules": [
-        "pulseaudio", "network",  "battery"
+        "network", "pulseaudio", "battery"
     ]
 },
 
@@ -73,9 +73,9 @@
  }, 
 
 "network": {
-      "format-wifi": "    ",
-      "format-ethernet":"    ",
-      "format-disconnected": "    ",
+      "format-wifi": "   ",
+      "format-ethernet":"   ",
+      "format-disconnected": " ",
       "tooltip-format": "{ipaddr}",
       "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
       "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
