@@ -56,30 +56,9 @@ window#waybar {
     transition-duration: 0.05s;
 }
 
-window#waybar.fullscreen .modules-left{
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background: rgba(26, 27, 38, 1);
-  border-radius: 10px;
-  box-shadow: 0px 0px;
-  margin-bottom: 4px;
-}
-window#waybar.fullscreen .modules-center{
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background: rgba(26, 27, 38, 1);
-  border-radius: 10px;
-  box-shadow: 0px 0px;
-  margin-bottom: 4px;
-}
-window#waybar.fullscreen #status_items{
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background: rgba(26, 27, 38, 1);
-  border-radius: 10px;
-  box-shadow: 0px 0px;
-  margin-bottom: 4px;
-}
+window#waybar.fullscreen .modules-left,
+window#waybar.fullscreen .modules-center,
+window#waybar.fullscreen #status_items,
 window#waybar.fullscreen #tray_grp{
   padding-top: 0px;
   padding-bottom: 0px;
@@ -88,6 +67,7 @@ window#waybar.fullscreen #tray_grp{
   box-shadow: 0px 0px;
   margin-bottom: 4px;
 }
+
 
 tooltip {
   border-radius: 15px;
