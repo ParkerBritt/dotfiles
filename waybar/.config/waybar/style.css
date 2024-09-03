@@ -68,6 +68,18 @@ window#waybar.fullscreen #tray_grp{
   margin-bottom: 4px;
 }
 
+window#waybar.empty .modules-left,
+window#waybar.empty .modules-center,
+window#waybar.empty #status_items,
+window#waybar.empty #tray_grp{
+  transition-delay: 3s;
+  transition-duration: 3s;
+  background: rgba(26, 27, 38, 0.2);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+window#waybar.empty #workspaces button.active{
+  background: rgba(26, 27, 38, 0.2);
+}
 
 tooltip {
   border-radius: 15px;
