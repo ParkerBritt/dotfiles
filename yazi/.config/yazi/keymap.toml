@@ -1,4 +1,0 @@
-[[manager.prepend_keymap]]
-on   = [ "<C-s>" ]
-run = 'quit'
-desc = "close program"
