@@ -59,6 +59,8 @@
     imagemagick
     ffmpeg-full
     vesktop
+    polkit
+    udiskie
 
     # hyprland
     pyprland
@@ -83,7 +85,9 @@
 
   ];
 
+  services.udisks2.enable = true;
   programs.dconf.enable = true;
+  security.polkit.enable = true;
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
