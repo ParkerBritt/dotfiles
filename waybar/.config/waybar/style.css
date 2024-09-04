@@ -122,13 +122,20 @@ tooltip label {
 #workspaces button.active{
     background-color: rgba(26, 27, 38, 1);
     border-radius: 30px;
-    margin: 0px 10px;
-    font-size: 30px;
+    margin: 0px 7px;
+    padding: 0px 5px;
+}
+#workspaces button.active label{
+    color: rgba(255, 255, 255, 0.9);
 }
 #workspaces button{
-    margin: 0 0px;
-    font-size: 24px;
-    transition-duration: 0.3s;
+    margin: 0 2px;
+    transition-duration: 0.25s;
+    padding: 0px 0px;
+    
+}
+#workspaces button label{
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #temperature.critical,
