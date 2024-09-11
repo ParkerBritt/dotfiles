@@ -61,6 +61,7 @@
     vesktop
     polkit
     udiskie
+    peek
 
     # hyprland
     pyprland
@@ -75,6 +76,9 @@
 
     # programming
     python311Full
+    python311Packages.pip
+    pipx
+    poetry
     libgcc
     gcc
     cmake
@@ -82,7 +86,6 @@
     boost
     clang-tools
     nodePackages.live-server
-
   ];
 
   services.udisks2.enable = true;
