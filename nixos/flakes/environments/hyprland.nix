@@ -9,6 +9,8 @@
         wayland
         hyprpaper
         wl-clipboard
+        ags
+        tofi
     ];
 
     programs.hyprland = {
