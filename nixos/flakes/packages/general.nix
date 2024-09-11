@@ -86,7 +86,9 @@
     boost
     clang-tools
     nodePackages.live-server
+    nginx
   ];
+
 
   services.udisks2.enable = true;
   programs.dconf.enable = true;
