@@ -12,6 +12,7 @@
     signal-desktop
     vlc
     libreoffice
+    moonlight-qt
 
     # shell tool
     du-dust
@@ -87,7 +88,8 @@
     clang-tools
     nodePackages.live-server
     nginx
-  ];
+
+];
 
 
   services.udisks2.enable = true;
