@@ -88,6 +88,8 @@
     clang-tools
     nodePackages.live-server
     nginx
+    podman
+    podman-compose
 
 ];
 
