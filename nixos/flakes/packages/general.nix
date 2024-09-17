@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 {
+
+  imports =
+  [
+    ./podman.nix
+  ];
+
   # install packages
   environment.systemPackages = with pkgs; [
     # gui
@@ -89,9 +95,6 @@
     clang-tools
     nodePackages.live-server
     nginx
-    podman
-    podman-compose
-
 ];
 
 
@@ -101,6 +104,6 @@
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 }
 
