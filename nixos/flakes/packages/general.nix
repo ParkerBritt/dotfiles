@@ -63,6 +63,7 @@
     polkit
     udiskie
     peek
+    tree
 
     # hyprland
     pyprland
