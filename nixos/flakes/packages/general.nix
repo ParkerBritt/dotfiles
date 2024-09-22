@@ -93,8 +93,11 @@
     gnumake
     boost
     clang-tools
-    nodePackages.live-server
     nginx
+
+    # npm
+    nodePackages.live-server
+    nodePackages.browser-sync
 ];
 
 
