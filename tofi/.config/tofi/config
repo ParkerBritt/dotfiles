@@ -17,7 +17,6 @@ input-background = #33658A
 input-background-corner-radius = 15
 input-background-padding = 8, 500
 min-input-width = 200
-num-results = 9
 clip-to-padding = false
 hide-cursor = false
 text-cursor-style = underscore
