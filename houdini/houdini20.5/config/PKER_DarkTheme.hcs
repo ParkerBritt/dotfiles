@@ -1,0 +1,1079 @@
+Scheme: Parker Dark v1.0
+
+#include "AXSC_basic_colors.inc"
+#include "AXSC_NodeGraphDark.inc"
+
+// -----------------------------------------------------------------
+
+#define AXSCBASE		#1F1F1F			// Main BG Color
+#define AXSCBASEALT		#242424			// Slightly lighter BG
+#define AXSCBASEALTD	#1A1A1A			// Slightly Darker BG
+#define AXSCBASETINT	#292929			// BG Tint Color
+
+#define AXSCBOR01 		#272727			// Subtle Border
+
+#define AXSCW87			#D3D3D3			// White / Active Text
+#define AXSCW60			#5F5F5F			// Unselected / Selectable Text
+#define AXSCW38			#272727			// Disabled Text
+
+#define AXSCACCENT		#BD8AFC			// Main Accent
+#define AXSCERROR		#D03D57			// Error Color
+#define AXSCWARN 		#D68F4E			// Warning Color
+
+#define AXSCBTN 		#303030			// Button Color
+#define AXSCBTN_HL		#484848			// Button Hightlight
+
+#define DUNNO			#FF0000			// DON'T KNOW
+
+// -----------------------------------------------------------------
+
+
+
+
+// Color correction for the icons --------------------------------------------
+
+IconBrightness:	0.8
+IconContrast:	0.9
+IconGamma:	1
+IconSaturation:	1
+
+// New UI Resources ----------------------------------------------------------
+
+//
+// Watch out when adjusting BackColor.  If white lines appear in the UI, you 
+//  may need to adjust the BorderDark as well due to automatic contrast code
+//   which flips the foreground color from dark to light when the 
+//    contrast between the foreground and background is too low.   
+//
+
+
+BackColor:				AXSCBASEALT
+
+ButtonGradHi:			AXSCBTN
+ButtonGradLow:			AXSCBTN	
+ButtonNonActiveGradLow:	AXSCBASE    		// Low end of gradient on non-selected tabs
+
+ButtonShadowLight:		AXSCBOR01 			// Borders Top
+ButtonShadowMed:		AXSCBASEALTD 		// Borders around tabs and buttons
+ButtonShadowMedDark:	AXSCBASETINT		// Border of activated buttons
+ButtonShadowDark:		AXSCBOR01			// Lots of small borders
+ButtonShadow:			AXSCBASE			// Border of pressed button
+
+
+// Toolbar is the bar with the frame timeline
+
+ToolbarBevelLight:		AXSCBOR01		// Bottombar Highlights
+ToolbarBevelDark:		AXSCBOR01		// Bottombar Highlights
+ToolbarFlatGradHi:		AXSCBASE    	// Bottom of Tabs/Timeline BG Gradient
+ToolbarFlatGradLo:		AXSCBASE   		// Top of Tabs/Timeline BG Gradient
+	
+DialogBlendBG:			AXSCBASETINT		// messages that pop-up (cancel without saving)
+
+ButtonText:				AXSCW87 		// Main Button + Tab Text Color
+ButtonPressedText:		AXSCW87 
+ButtonPressedText2:		AXSCW60
+ButtonPressedGradHi:	AXSCW60
+ButtonPressedGradLow:	AXSCW60
+
+ButtonMenuArrowHi:		AXSCBASETINT	// Arrow Expando BG colors
+ButtonMenuArrowLow:		AXSCBASETINT	// Arrow Expando BG Colors
+ButtonMenuArrow:		AXSCW60 		// Arrow icon Color
+
+ButtonArrow:			AXSCW60			// Mini Dropdown Arrow Icon
+ButtonArrowDisabled:	AXSCW38 		// Mini Dropdown Arrow disabled
+ButtonArrowPressed:		AXSCW87			// Pressed
+
+TextColor:				AXSCW87			// Main Label Text Color
+HiliteTextColor:		AXSCW87
+HiliteTextBG: 			AXSCBASETINT	// ?
+SecondaryText:     		AXSCW60			// ?
+LinkText:          		AXSCACCENT		// ?
+
+
+// Dropdown Menu
+
+MenuBG:					AXSCBASE 		// Windows Menu (File, edit...) BG color
+MenuText:				AXSCW87			// File, edit.. text color
+MenuTextDisabled:		AXSCW60			// Disabled Text
+MenuTextHotkey:			AXSCW60			// Hotkey Tip Text color
+MenuHighlight:			AXSCW38			// Menu Icon + Border color
+MenuShadow:				AXSCBASETINT	// Menu Dropdown Border Color
+MenuTextSelected:		AXSCW87      	// Text
+MenuSelectedBG:			AXSCBASETINT	// Menu Hovered BG
+MenuTitleBG:			AXSCBASETINT	// Menu Subtitle BG
+InvertedMenuBackground:	DUNNO			// ??
+
+
+
+// Colors for Ramp (Float) parameters.
+RampBG:				AXSCBASE
+RampFG:				AXSCW60
+RampBGDisabled:		AXSCBASE
+RampFGDisabled:		AXSCW38
+RampGrid:			AXSCW38
+RampCurve:			AXSCW87
+RampCurveDisabled:	AXSCW38
+RampKeyBG:			AXSCW87
+RampKeyFG:			AXSCW87
+RampKeyDisabled:	AXSCW38
+RampKeyHoverBG:		AXSCACCENT
+RampKeyHoverFG:		AXSCACCENT
+RampMarkerHover:	AXSCACCENT
+
+Separator:			AXSCBOR01 //Seems to do the border of the Take button
+
+
+
+// Toggle Fields
+												
+CheckBG:			AXSCBASEALTD
+CheckLocated:		AXSCACCENT
+CheckColor:			AXSCW87
+												
+RadioBG:			AXSCBASEALTD
+RadioBorder:		AXSCW60
+RadioDot:			AXSCW87	
+RadioDotHighlight:	AXSCACCENT
+
+
+// Input Fields
+
+TextboxBG:				AXSCBASEALTD
+TextboxInvalidBG:		AXSCERROR		
+TextboxBorderPrimary:	AXSCW38
+TextboxBorderHighlight:	AXSCW38
+TextboxBorderStippled:	AXSCW60
+TextboxBorderKeyFocus:	AXSCACCENT
+TextboxError:			AXSCERROR 	
+TextboxGutter:			AXSCBASETINT		
+TextboxDropMarker: 		#FF00FF
+
+
+TextboxFeedbackFG:			AXSCW87  // Tab Search Bar nodes 
+TextboxFeedbackBG:			AXSCBASE
+SelectedTextFG:				AXSCBASE
+SelectedTextBG:				AXSCACCENT
+SelectedTextDisabledBG: 	AXSCW38
+
+
+
+// SLIDERS
+
+SliderTopBorder:			AXSCBASEALTD
+SliderBottomBorder:			AXSCBASEALTD
+SliderAdvancedBevel:		AXSCW60
+SliderAdvancedGroove:		AXSCW60
+SliderRemainingBevel:		AXSCBASEALTD
+SliderRemainingGroove:		AXSCBASEALTD	
+SliderTick:					AXSCW60
+SliderTickLabel:   			AXSCW60
+SliderRangeBrackets:		AXSCBASETINT
+
+SliderThumbGradHi: 			AXSCW60
+SliderThumbGradLow: 		AXSCW60
+SliderThumbPressedGradHi:	AXSCACCENT	 
+SliderThumbPressedGradLow:	AXSCACCENT 
+SliderThumbTopBorder:		AXSCW60
+SliderThumbTopBevel:		AXSCW60
+SliderThumbBottomBevel:		AXSCW60
+SliderThumbBottomBorder:	AXSCW60
+SliderThumbRangeArrow:		AXSCW60
+
+
+// Frame start/end bar
+
+RangeSliderBackground:		AXSCBASEALTD
+RangeSliderRect:			AXSCBTN
+RangeSliderRectLocated:		AXSCW87
+RangeSliderRectSelected:	AXSCACCENT
+RangeSliderArrow:			AXSCBTN
+RangeSliderArrowLocated:	AXSCW87
+RangeSliderArrowSelected:	AXSCACCENT
+
+
+// ??
+
+KeyframeButtonSelectedGradHi:		AXSCACCENT
+KeyframeButtonSelectedGradLow:		AXSCACCENT 
+
+KeyframeButtonLocatedGradHi:		AXSCW38
+KeyframeButtonLocatedGradLow:		AXSCW38
+
+KeyframeButtonGradHi:			AXSCBASETINT
+KeyframeButtonGradLow:			AXSCBASETINT
+
+KeyframeButtonCircleKey:		AXSCACCENT
+
+KeyframeButtonCircleSomeKey:	AXSCW87
+KeyframeButtonCircleNoKey:		AXSCW87
+KeyframeButtonCirclePending:	AXSCW87
+
+KeyframeButtonBorder:			AXSCW87
+KeyframeButtonCircleFillOpacity:AXSCW87
+
+
+// Middle Mouse Button Popup
+
+LadderBG:			AXSCBASE
+LadderText:			AXSCW87
+LadderHighlight:	AXSCBASETINT
+LadderOutline:		AXSCW60
+LadderShadow:		AXSCBOR01
+
+ScrollbarUpperBorder:		AXSCBASE
+ScrollbarBottomBorder:		AXSCBASE
+ScrollbarWell:				AXSCBASE
+ScrollbarWellShadow1:		AXSCBASE
+ScrollbarWellShadow2:		AXSCBASE
+ScrollbarWellShadow3:		AXSCBASE
+ScrollbarWellShadowBlend12:	AXSCBASE
+ScrollbarWellShadowBlend13:	AXSCBASE
+ScrollbarWellShadowBlend22:	AXSCBASE
+ScrollbarWellShadowBlend23:	AXSCBASE
+ScrollbarWellShadowBlend32:	AXSCBASE
+ScrollbarWellShadowBlend33:	AXSCBASE
+
+
+ScrollbarThumbTopBorder:	AXSCBASETINT	// Scrollbar Border Colors
+ScrollbarThumbBottomBorder:	AXSCBASETINT 	// Scrollbar Border Colors
+ScrollbarThumbBevel:		AXSCBASETINT	// Scrollbar Border Colors
+ScrollbarThumbGrippyBase:	AXSCW60 		// Scrollbar Icon Color
+ScrollbarThumbGrippyEdge:	AXSCW60 		// Scrollbar Icon Color
+
+ScrollbarButtonTopBorder:		AXSCBOR01
+ScrollbarButtonBottomBorder:	AXSCBOR01
+ScrollbarButtonBetweenBorder:	AXSCBOR01
+ScrollbarButtonBevel:			AXSCBASETINT
+ScrollbarButtonArrow:			AXSCW60
+
+ScrollArrow:				AXSCW60
+ScrollArrowSelected:		AXSCW87
+ScrollArrowDisabled:		AXSCW38
+
+
+// Progress Bar Pop-up
+
+ProgressMeterPercentLabelLeft:		AXSCW87
+ProgressMeterPercentLabelRight:		AXSCW87
+ProgressMeterTopBorder:				AXSCBOR01
+ProgressMeterBottomBorder:			AXSCBOR01
+ProgressMeterWellGradHi:			AXSCBASETINT
+ProgressMeterWellGradLo:			AXSCBASETINT
+ProgressMeterBevelTop:				AXSCBOR01
+ProgressMeterBevelBottom:			AXSCBOR01
+ProgressMeterGradHi:				AXSCACCENT
+ProgressMeterGradLo:				AXSCACCENT
+ProgressMeterText:					AXSCW87
+
+
+/* Geometry Spreadsheet List */
+
+ListShadow:					AXSCBASE 				// Geometry List Top Border
+ListHighlight:				AXSCBASE			
+ListBorder:					AXSCBASE
+ListBG:						AXSCBASE				// clrs bg in download clr scheme window
+ListEntry1:					AXSCBASEALT 			//Geometry List Cell BG B
+ListEntry2:					AXSCBASE 				//Geometry List Cell BG A
+ListEntrySelected:			AXSCACCENT                 // default was way too dark, manually changed
+ListTitleShadow:			AXSCBOR01 
+ListTitleHighlight:			AXSCBOR01
+ListTitleGradHi:			AXSCBASE 			// Geometry List BG
+ListTitleGradLow:			AXSCBASE 			// Geometry List BG
+ListTitleHighlightGradHi:	AXSCBASETINT			// ??
+ListTitleHighlightGradLow:	AXSCBASETINT
+ListText:					AXSCW87		// clrs text in download clr scheme window
+ListAltText:				AXSCW60
+
+SwitchButtonSelected: DUNNO
+SwitchButtonLocated: DUNNO
+
+HotkeyMgrUnboundActionFG:	AXSCW87
+
+// Divider line between spreadsheet columns
+SSBorder:	AXSCBOR01					// Spreadsheet divider
+
+// Drag And Drop Outline in spreadsheet.
+SSOutline:	AXSCBASE
+
+// Highlight Color Alpha in the channel lister
+// Red is for the Displayed Channel Alpha
+// Green is for the Graph Selected Channel Alpha.
+SSHighlightAlpha:	0.25 0.55 0.0
+
+SSHeader:	AXSCBASETINT
+
+// New Parameters Group Backgrounds //
+
+GroupBorder:	AXSCBOR01
+
+GroupBorder:            DRKBORDER
+
+GroupHeader0:           AXSCBTN
+GroupHeaderTop0:        AXSCBTN
+GroupHeaderHi0:         AXSCBTN_HL
+GroupHeaderHiTop0:      AXSCBTN_HL
+GroupHeaderOpen0:       AXSCBTN
+GroupHeaderOpenTop0:    AXSCBTN
+GroupHeaderDisabled0:   AXSCBASEALT
+GroupHeaderDisabledTop0:AXSCBASEALT
+GroupBody0:             AXSCBASEALT
+
+GroupHeader1:           AXSCBTN
+GroupHeaderTop1:        AXSCBTN
+GroupHeaderHi1:         AXSCBTN_HL
+GroupHeaderHiTop1:      AXSCBTN_HL
+GroupHeaderOpen1:       AXSCBTN
+GroupHeaderOpenTop1:    AXSCBTN
+GroupHeaderDisabled1:   AXSCBASEALT
+GroupHeaderDisabledTop1:AXSCBASEALT
+GroupBody1:             AXSCBASEALT
+
+GroupHeader2:           AXSCBTN
+GroupHeaderTop2:        AXSCBTN
+GroupHeaderHi2:         AXSCBTN_HL
+GroupHeaderHiTop2:      AXSCBTN_HL
+GroupHeaderOpen2:       AXSCBTN
+GroupHeaderOpenTop2:    AXSCBTN
+GroupHeaderDisabled2:   AXSCBASEALT
+GroupHeaderDisabledTop2:AXSCBASEALT
+GroupBody2:             AXSCBASEALT
+
+GroupHeader3:           AXSCBTN
+GroupHeaderTop3:        AXSCBTN
+GroupHeaderHi3:         AXSCBTN_HL
+GroupHeaderHiTop3:      AXSCBTN_HL
+GroupHeaderOpen3:       AXSCBTN
+GroupHeaderOpenTop3:    AXSCBTN
+GroupHeaderDisabled3:   AXSCBASEALT
+GroupHeaderDisabledTop3:AXSCBASEALT
+GroupBody3:             AXSCBASEALT
+
+
+
+
+
+InfoBG:		AXSCBASE
+InfoText:	AXSCW87
+
+PopupHelpBG:		AXSCBASE 		// Hover Tooltips
+PopupHelpFG:		AXSCW87
+PopupHelpHotkeyFG:	AXSCW87
+PopupExtraHelpFG:	AXSCW87
+PopupExtraHelpBG:	AXSCBASETINT 
+
+ShelfGradHi:		AXSCBASE 		// Active Shelf BG
+ShelfGradMidHi:		AXSCBASE 		// Active Shelf BG
+ShelfGradMidLow:	AXSCBASE 		// Active Shelf BG
+ShelfGradLow:		AXSCBASE 		// Active Shelf BG
+
+
+ShelfBG:			AXSCBASE 		// This does not appear to be used
+ShelfEmptyBG:		AXSCBASE 		// Shelf Empty Space BG
+ShelfTabActiveHi:	AXSCBASETINT	// Shelf Tabs SELECTED BG
+ShelfTabActiveLow:	AXSCBASETINT  	// Shelf Tabs SELECTED BG
+ShelfTabInactiveHi:	AXSCBASE 		// Shelf Tabs Selectable BG
+ShelfTabInactiveLow:AXSCBASE 		// Shelf Tabs Selectable BG
+
+PaneTabActiveHi:	AXSCBASETINT 	// Pane Tab Active BG
+PaneTabActiveLow:	AXSCBASETINT    // Pane Tab Active BG
+PaneTabInactiveHi:	AXSCBASE  		// Pane Tab Inactive BG
+PaneTabInactiveLow:	AXSCBASE 		// Pane Tab Inactive BG
+PaneTabEdges:		AXSCBASE 
+PaneEmptyBG:		AXSCBASE 		// Pane Empty Space BG
+PaneBorder:			AXSCBOR01
+PaneHeaderGradHi:	AXSCBASETINT	// Active Pane BG
+PaneHeaderGradLow:	AXSCBASETINT 	// Active Pane BG
+PaneTabShadow:		AXSCBASETINT
+
+PathGadgetArrow1:	AXSCBOR01
+PathGadgetArrow2:	AXSCBOR01
+PathGadgetArrow3:	AXSCBOR01
+//
+PathGadgetArrow1Selected:			AXSCBOR01  	//
+PathGadgetArrow2Selected:			AXSCBOR01   //
+PathGadgetArrow3Selected:			AXSCBOR01   //
+//		
+PathGadgetPrimaryBorder:			AXSCBOR01
+PathGadgetSecondaryBorder:			AXSCBOR01
+//
+PathGadgetPrimaryBorderSelected:	AXSCBOR01
+PathGadgetSecondaryBorderSelected:	AXSCBOR01
+//
+PathGadgetBevel:					AXSCBOR01 
+PathGadgetBevelSelected:			AXSCBOR01
+//
+PathGadgetText:						AXSCW87
+//
+PathGadgetGradHi:					AXSCBASE 	// Path BG
+PathGadgetGradLow:					AXSCBASE    // Path BG
+//
+PathGadgetGradHiSelected:				AXSCW38
+PathGadgetGradLowSelected:				AXSCW38
+//
+PathGadgetHistoryButtonBevel:			AXSCBASETINT
+PathGadgetHistoryButtonBevelSelected:	AXSCBASE
+
+ViewportBorder:							AXSCBASE
+ViewportDividers:						AXSCBOR01
+
+ViewportInspectBox:						AXSCBASE
+ViewportInspectBorder:					AXSCBOR01
+ViewportInspectText:					AXSCW87
+
+TreeNodeBG:							AXSCBASE
+TreeNodeAlternateBG:				AXSCBASEALTD
+TreeNodeSelectedBG:					AXSCBASETINT
+TreeNodeSelectedFG:					AXSCW87
+TreeNodeReservedParmFG:				AXSCACCENT		// also appears to not be in use anymore
+TreeLine:							AXSCBOR01
+
+
+// Performance Monitor
+
+PerformanceGood: 0.45 0.82 0.08
+PerformanceBad: 0.8 0 0
+PerformanceWarn: #F8 74 31
+
+RecordBtnFlash: #E6 17 17
+
+NetworkPerformanceGood: #95 A0 84
+NetworkPerformanceBad: #D4 AA 9E 
+NetworkPerformanceWarn: #B0 A9 57
+
+
+
+// Nodes
+
+NodeConnectionDefaultBG:	DUNNO
+NodeConnectionTextBG:		0.415 0.395 0.44
+NodeConnectionGlow:		HSV 40 0.5 1
+NodeConnectionArrowLight:	DUNNO
+NodeConnectionArrowDark:	DUNNO
+NodeConnectionBevel:		DUNNO
+NodeConnectionTopBorder:	DUNNO
+NodeConnectionBottomBorder:	DUNNO
+
+NodeButtonGrad:				DUNNO
+NodeButtonSelectedGrad:		DUNNO // NodeButtonSelectedGrad does not seem to be used anymore
+NodeButtonBevel:			DUNNO
+NodeButtonBevelSelected:	DUNNO 
+NodeSeparator:				DUNNO
+NodeSeparatorEnabled:		DUNNO
+NodeError:				AXSCERROR
+NodeWarningBG:			DUNNO
+NodeWarningFG:			1.0 0.87 0
+NodeDefaultBG:			DUNNO
+NodeHighlight:			0 0.68 0.94
+NodeDebugFG:			0.741 0.988 1
+
+NodeTemplateFlag:		#FF 66 FF
+NodeSelectableTemplateFlag:	#CC 33 CC
+NodeBypassFlag:			1.0 1.0 0
+NodeRenderFlag:			0.666 0.5 1.0
+NodeDisplayFlag:		0 0.4 0.8
+NodeDisplayAndRenderFlag:	0 0.68 0.94
+NodeOutputFlag:			0.75 0.4 0.0
+NodeSelectableFlag:		0.4 0.8 0
+NodeExportFlag:			0.75 0.4 0.0
+NodeHiddenFlag:			0.58 0.55 0.43
+NodeAudioFlag:			0.0 0.5 0.5
+NodeThumbnailFlag:		0.35 0.6 0.2
+NodeLockFlag:			#FF 33 00
+NodeSoftLockFlag:		#C4 E3 61 
+NodeLoadedWithUnloadFlagOn:	1.0 0.0 1.0
+NodeDebugFlag:	0.741 0.988 1
+
+NetworkSelection:		HSV 65 1 0.95
+NetworkCurrent:			HSV 45 1 0.95
+NetworkCurrentNonSelected:	DUNNO
+NetworkBackground:		DUNNO
+NetworkDisplayHighlight:	0.257655 0.396379 0.521569
+NetworkRenderHighlight:		0.375148 0.310776 0.498039
+NetworkOutputHighlight:		0.75 0.4 0.0
+NetworkTemplateHighlight:	#FF 66 FF
+NetworkLegacyHighlight:		#FF 33 33
+NetworkOverviewDragger:		AXSCW87
+NetworkTimeDependent:		0.0 1.0 0.0
+
+NetworkGrid:			DUNNO
+
+NetworkWireNormal:		DUNNO
+NetworkWireActive:		HSV 45 0.6 0.55
+NetworkWireActiveLight:		HSV 45 0.65 0.8
+NetworkWireHighlight:		1.0 1.0 0.0
+NetworkWireShadow:		DUNNO
+NetworkWireExtraNormal:		HSV 160 0.6 0.55
+NetworkWireExtraActive:		HSV 0 0.6 0.55
+NetworkWireExtraActiveLight:	HSV 0 0.65 0.8
+NetworkWireIKNormal:		HSV 240 0.6 0.55
+NetworkWireIKActive:		HSV 240 0.6 0.55
+NetworkWireIKActiveLight:	HSV 240 0.65 0.8
+NetworkWireOutputOverrideNormal:	1.0 1.0 1.0
+NetworkWireOutputOverrideHighlight:	1.0 0.784 0.0
+NetworkWireTimeDepNormal:	0.0 1.0 0.0 
+NetworkWireLoopBack:		HSV 180 1.0 1.0 1.0
+NetworkWirePassThrough:		HSV 180 1.0 1.0 1.0
+
+
+
+// STATUS PROGRESS BAR BOTTOM SCREEN
+
+StatusBarMessageFG:	AXSCW87
+StatusBarMessageBG:	AXSCBASE
+//
+StatusBarPromptFG:	AXSCW87
+StatusBarPromptBG:	AXSCACCENT
+//
+StatusBarWarningFG:	AXSCW87
+StatusBarWarningBG:	AXSCWARN
+//
+StatusBarErrorFG:	AXSCW87
+StatusBarErrorBG:	AXSCERROR
+
+
+// Dope Sheet here means the frame dragger
+
+DopeSheetCurrentFrameFG:		AXSCW87
+DopeSheetCurrentFrameBG:		AXSCBASE
+
+DopeSheetHoverFrameFG:			AXSCW87
+DopeSheetHoverFrameBG:			AXSCBASETINT
+DopeSheetHoverLine:				AXSCACCENT
+
+DopeSheetIndicatorLine:			AXSCBASE
+DopeSheetIndicatorClickLine:	AXSCW87
+DopeSheetIndicatorOverLine:		AXSCBOR01
+
+DopeSheetKnob:					AXSCW87
+DopeSheetKnobClick:				AXSCACCENT
+DopeSheetKnobOver:				AXSCACCENT
+DopeSheetKnobPendingKey:		0 0 1
+DopeSheetKnobOutlier:			0 0 1
+
+DopeSheetKeyActive:				AXSCACCENT
+DopeSheetKeyPartial2:			AXSCW87
+DopeSheetKeyPartial:			AXSCW87
+DopeSheetKeyPending:			AXSCW87
+DopeSheetKeyMuted:				AXSCW60
+DopeSheetKeyOverlay:			DUNNO
+DopeSheetKeyDisabled:			AXSCW38
+DopeSheetKeySelected:			AXSCW87
+DopeSheetKeySelectedBorder:		AXSCW87
+	
+DopeSheetOutsideRangeBG:		AXSCBASETINT
+DopeSheetSimulation:			AXSCACCENT 				// Simulation Cached
+DopeSheetSimulationReset:		AXSCWARN				// Simulation out of date
+DopeSheetSimulationPlaying: 	DUNNO					// Sim??
+DopeSheetTimeline:				AXSCW60 				// This is the timeline
+DopeSheetTimelineAudio:			AXSCW60
+DopeSheetTickLarge:				AXSCW60					// This is the timeline
+DopeSheetTickSmall:				AXSCW60					// This is the timeline
+DopeSheetTickSmallAudio:		AXSCW60
+DopeSheetTickNumber:			DUNNO
+DopeSheetRangeNumber:			DUNNO
+DopeSheetRowDisabled:			DUNNO
+
+DopeSheetRowLight:		AXSCBASE
+DopeSheetRowDark:		AXSCBASEALT
+DopeSheetColLine:		AXSCBOR01
+DopeSheetRowLine:		AXSCBOR01
+DopeSheetViewLock:		AXSCWARN
+DopeSheetSelection:			HSV 60 1.0 0.5
+DopeSheetSelectionHover:	HSV 60 0.5 0.9
+DopeSheetSelectionActive:	HSV 60 0.5 0.9
+DopeSheetSelectionInactive:	HSV 60 0.9 0.7
+DopeSheetSelectionInactiveLock:	1 0 1
+DopeSheetSelectionText:		DUNNO
+DopeSheetSelectionRemove:	1 0 0
+DopeSheetOverwriteHover:	1 0 0
+DopeSheetOverwriteActive:	0.7 0 0
+DopeSheetOverwriteInactive:	0.9 0 0
+DopeSheetSpreadSheetText:	DUNNO
+DopeSheetSpreadSheetDisabled:	0.07 0 0
+DopeSheetRippleTool:		1 1 0
+
+BorderLight:	AXSCBOR01
+BorderDark:		0.04 0.04 0.04 // Annoying bottom screen border
+
+AssetBannerBackground:		AXSCBASE
+AssetUpdateStatusBackground:	AXSCBASETINT
+AssetUpdateStatusText:		AXSCW87
+OrboltSplashscreenProgressbar:	0.19 0.28 0.38
+
+MplayInspectBox:	AXSCBASE
+MplayInspectBorder:	AXSCBOR01
+MplayInspectText:	AXSCW87
+MplayColorCorrectWarn:	1 1 0.75 
+
+
+//
+// The following colors are used on the top control panels
+// within the desktop panes to indicate the current data type.
+// These are Tints, not colors, so beware of modifying the saturation
+// or brightness.
+//
+ObjectColor:		HSV 210 0.20 1.75
+SopColor:		HSV 100 0.20 2
+DopColor:		HSV 0 0.20 2
+PopNetColor:		HSV 170 0.20 1.75
+PopColor:		HSV 170 0.20 1.75
+ShopColor:		HSV 340 0.20 1.75
+VopNetColor:		HSV 260 0.20 1.75
+VopColor:		HSV 260 0.20 1.75
+ChopNetColor:		HSV 60 0.20 1.75
+ChopColor:		HSV 60 0.20 1.75
+CopNet2Color:		HSV 40 0.20 2
+Cop2Color:		HSV 40 0.20 2
+OutputColor:		HSV 20 0.20 2
+RootColor:		HSV 0 0 1
+
+// Channel Editor Colors ---------------------------------------------------
+//
+// These colors for for graphical elements in the Channel Editor (AKA the keyframe curve window)
+//
+ChannelEditorBackground:	    AXSCBASE  // Background of the graph
+ChannelEditorBGOutsideGlobal: 	AXSCBASETINT  // Background of the graph outside the global time range
+
+ChannelEditorBGOutsidePlayback: AXSCBASEALTD // Background of the graph outside the playback range
+
+ChannelEditorTimebar:		    AXSCW87  // Color of timebar to be xored on top
+ChannelEditorGridLine:		   	0.22 0.22 0.22  // Graph grid line Custom !fix
+
+ChannelEditorGridDashedLine:	AXSCW60  // Graph grid dashed line
+ChannelEditorHandleDefault:	    0.50 0.50 0.50  // Handles
+ChannelEditorHandleSelected:	    AXSCW87  // Selected handle
+ChannelEditorHandleLocated:	    AXSCACCENT  // Handle when mouse is on top
+ChannelEditorHandleSelectedLocated: AXSCACCENT  // Selected handle when mouse is on top
+ChannelEditorStatsText:		    AXSCW87 // Color of the stats text
+ChannelEditorTimeText:		    DUNNO    // Color of the bottom time
+
+ChannelEditorViewLock:		    DUNNO
+
+ChannelListCircleOutline:	    AXSCW87
+
+// Chop Editor Colors ---------------------------------------------------
+//
+// These colors for for graphical elements in the Chop Editor
+//
+ChopEditorTimeBar:		    0.00 0.00 0.00
+
+// Channel Colors ----------------------------------------------------------
+//
+// These colors are for coloring channels in various places in Houdini
+// (eg. the Channel Editor and Channel List panes).
+//
+// They are currently divided into 4 groups:
+//   - red colors:   for channel names ending in x or r
+//   - green colors: for channel names ending in y or g
+//   - blue colors:  for channel names ending in z or b
+//   - other colors: for channel names not ending in letters mentioned above
+// The channel names ending r, g, or b always use the first entry of each of
+// their respective color groups.
+//
+// Each color group contains an arbitrary number of similar colors, uniquely
+// determined by their numeric suffix.  When determining the color of a
+// particular channel, both its node and channel name is used. For example,
+// point1/tx and point1/vx will be both be reds of different hues, which in turn
+// will also differ from point2/tx and point2/vx.
+//
+ChannelColorRed1:   0.8 0.15 0.15       // red
+ChannelColorRed2:   hsv 320.0 1.0 0.75  // before red
+ChannelColorRed3:   hsv 340.0 1.0 0.75
+ChannelColorRed4:   hsv  20.0 1.0 0.75  // after red
+ChannelColorRed5:   hsv  40.0 1.0 0.75
+ChannelColorGreen1:   0.15 0.8 0.15       // green
+ChannelColorGreen2: hsv  80.0 1.0 0.75  // before green
+ChannelColorGreen3: hsv 100.0 1.0 0.75
+ChannelColorGreen4: hsv 140.0 1.0 0.75  // after green
+ChannelColorGreen5: hsv 160.0 1.0 0.75
+ChannelColorBlue1:  0.15 0.15 0.8  // blue
+ChannelColorBlue2:  hsv 200.0 1.0 0.75  // before blue
+ChannelColorBlue3:  hsv 220.0 1.0 0.75
+ChannelColorBlue4:  hsv 260.0 1.0 0.75  // after blue
+ChannelColorBlue5:  hsv 280.0 1.0 0.75
+ChannelColorOther1: hsv  60.0 1.0 0.75  // Yellow
+ChannelColorOther2: hsv 180.0 1.0 0.75  // Aqua
+ChannelColorOther3: hsv 300.0 1.0 0.75  // Purple
+ChannelColorOther4: hsv  60.0 1.0 0.50  // Dark Yellow
+ChannelColorOther5: hsv 180.0 1.0 0.50  // Dark Aqua
+ChannelColorOther6: hsv 300.0 1.0 0.50  // Dark Purple
+
+// Geometry group colors ---------------------------------------------------
+//
+// These two colors specify opposing corners of a quadrilateral in HSV space.
+// Colors for geometry groups are sampled from within this quad.
+//
+GeoGroupColor1: hsv  90.0 0.3 1.0
+GeoGroupColor2: hsv 330.0 0.6 1.0
+
+// Syntax highlighting in editors and input boxes
+ParmSyntaxPlainColor:	AXSCW87			// White	#ffffff
+ParmSyntaxStringColor:	HSV 120 0.5  0.80	// Green	#66cc66
+ParmSyntaxVarColor:		HSV 60	0.5  0.93	// Pale Yellow	#eded77
+ParmSyntaxFuncColor:	HSV 180 0.5  0.80	// Cyan		#66cccc
+ParmSyntaxKeywordColor:	HSV 300 0.5  0.93	// Magenta	#ed77ed
+ParmSyntaxQuoteColor:	HSV 238 0.40 0.88 	// Pale Blue	#3a3b61
+ParmSyntaxNumberColor:	HSV 150 0.5  0.90	// Pale Green	#73e5ac
+ParmSyntaxRefColor:		HSV 34	0.5  0.87	// Pale Orange	#deae6f
+ParmSyntaxCommentColor:	HSV 60	0.5  0.93	// Pale Yellow	#eded77
+ParmSyntaxErrorColor:	HSV 0	0.8	1	// Red		#ff3333
+ParmParenMatchColor:	HSV 120 0.6	0.6	// Medium Green	#66ff66
+ParmQuoteMatchColor:	HSV 180	0.6	0.6	// Medium Cyan	#66ffff
+ParmMisMatchColor:		HSV 0	0.6	0.6	// Pale Red	#ff6666
+
+PreEditUnderlineColor:	AXSCERROR
+
+
+
+
+
+
+
+// Continues with outdated stuff below //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Old UI Resources ----------------------------------------------------------
+
+ForegroundColor:	0.045 0.045 0.045 // annoying Weird line below parameter top
+BackgroundColor:	DUNNO
+PaperColor:		AXSCW38
+TextHighlightColor:		AXSCBASEALTD
+
+ButtonColor:		AXSCBASETINT
+ButtonStripColor:	DUNNO
+
+ListTitleColor:		DUNNO
+ListEntryColor:		DUNNO
+ListEntrySelectedColor:	DUNNO
+
+MenuBarColor:		DUNNO
+MenuColor:		DUNNO
+BlueSelectedMenuColor:	DUNNO
+
+SliderColor:		DUNNO
+SliderThumbColor:	DUNNO
+InputColor:		DUNNO
+RadioColor:		AXSCBASE
+
+IconBackgroundColor:	DUNNO
+IconOutlineColor:	DUNNO
+IconShadowColor:	DUNNO
+IconLocatedColor:	DUNNO
+
+DisabledTextColor:		AXSCW60
+DisabledTextDropShadowColor:	AXSCBASE
+PopupHelpBackgroundColor:	AXSCBASETINT
+
+// New colors for Popup windows (Ex. Anonymous Usage Stats Window)
+PopupWindowTextColor:   DUNNO
+BlueTextLinkColor:      DUNNO
+
+
+
+
+// Colors for text boxes based on their function (animated parameter, keyframed parameter, ch etc)
+
+NormalColor:		0.0		0.0		0.0	// Not used
+
+LockedColor:		HSV 200		0.3		0.3		// Parameter is locked
+PendingColor:		HSV 60		0.5		0.5		// Pending change 
+IsKeyColor:			HSV 120		0.5		0.55	// Keyframe
+IsSoftKeyColor:		HSV 86		0.29	1		// constant() or raw() usually.
+IsNotKeyColor:		HSV 180		0.5		0.5		// Channel, not at a key. (Expression)
+DisabledColor:		HSV 207		0.27	0.75	// Channel is disabled from dopesheet
+ChannelLockedColor:	HSV 0		0		0.2		// Has "lock()" expression
+OverrideColor:		HSV 45		1		0.65	// Parameter is overridden by chop
+OtherLanguageColor:	#65 3D 66					// Expr language differs from node lang.
+AutoTakeExcluded:  	HSV 42 		0.17	0.31    // Exluded from take, and auto-take is on.
+
+NonDefAccentColor:	DUNNO						// Accent for non-default parms
+ChanRefAccentColor:	DUNNO						// Accent for !!ch()!! parms
+DisabledAccentColor:DUNNO					// Accents are this color when disabled
+
+ScopedBlend:		 #000000
+ScopedBaseColor:	 AXSCBASEALTD
+ScopedColor:		 DUNNO
+ScopedBaseSelectedColor: DUNNO
+ScopedSelectedColor:	 DUNNO
+#AutoScopedColor:	 HSV 40 0.125 0.375  # Low saturation orange grey, This matches the orange selection Hue.
+AutoScopedColor:	 HSV 210 0.125 0.375 # Low saturation blue grey, This matches the blue slider Hue.
+
+ScopedAlpha:		 1.0 1.0 1.0
+
+//
+// Parm border colors indicating that the parm has a handle associated with it:
+
+// handle is invisible, probably XCF
+InvisibleHandleColor:	0.70 0.00 0.00		// See rows/columns in Torus SOP
+// handle is visible, eg. xform handle
+VisibleHandleColor:	0.00 0.50 0.50
+// handle is active
+ActiveHandleColor:	DUNNO
+
+//
+// The following are used for the flag buttons in the group and node
+// tiles and listers.
+
+SelectOnColor:		0.75	0.75	0
+SelectOffColor:		0.56	0.56	0
+DisplayOnColor:		0.3	0.5	1
+DisplayOffColor:	0.2	0.3	0.6
+TemplateOnColor:	1	0.5	1
+TemplateOffColor:	0.75	0.37	0.75
+BypassOnColor:		1	0.5	0
+BypassOffColor:		0.5	0.25	0
+SelectableOnColor:	0.6	0.35	0.2
+SelectableOffColor:	0.4	0.2	0.15
+ExposeOnColor:		1	0	0
+ExposeOffColor:		0.6	0	0
+CurrentColor:		0.25	0.85	0.25
+
+// Main Window Dividers
+
+SplitBarBackground:		AXSCBASETINT
+SplitBarEdgeColor:		AXSCW60
+SplitBarLightColor:		AXSCBOR01
+SplitBarDarkColor:		AXSCBOR01
+SplitBarPaneOutline:	AXSCBOR01
+SplitBarGrippyColor:	AXSCW60
+SplitBarHighlight:		AXSCBOR01
+
+
+
+
+PlayBarOnColor:		0 1 1
+PlayBarOffColor:	0.25	0.25	0.25
+PlayBarDisabledColor:	0.4	0.4	0.4
+PlayBarResetColor:	1	1	0.0
+PlayBarNoPending:	0	0.8	0
+PlayBarNoPending2:	0	1	0
+PlayBarPending:		0.75	0.75	0.5
+PlayBarPending2:	1	1	0.5
+PlayBarAudioWaveColor:	0.643	0.643	0.643
+PlayBarStartEndFieldBG:	AXSCBASE   	// Frame Number Box
+PlayBarGStartEndFieldBG: AXSCBASE 	// Frame Number Box
+
+// The following are used for the indicator colours in the info button
+ErrorFlag:	0.9	0.1	0.1
+WarningFlag:	1	1	0
+MessageFlag:	0.8	0.8	0.8	
+FilteredFlag:	0.6	0.6	0.6
+
+// The NoSaveFlag color is used in the resource managers for .nosave files
+NoSaveFlag:	0.0	0.4	0.1
+
+// The following colors are for the status bar
+MessageColor:	AXSCBASE
+PromptColor:	AXSCACCENT
+WarningColor:	AXSCWARN
+ErrorColor:	AXSCERROR
+
+// The following color is for the SHOP viewer
+ShopViewTitleColor	1.0	1.0	0.0
+
+// The following colors are for Vop input/output labels
+VopInOutVectorColor:		#60C279
+VopInOutVectorArrayColor:	#448C69
+VopInOutVector2Color:		#27FF00
+VopInOutVector2ArrayColor:	#178902
+VopInOutVector4Color:		#C6FF00
+VopInOutVector4ArrayColor:	#6F8F00
+VopInOutNormalColor:		#A4A4FF
+VopInOutColorColor:		#FF24FF
+VopInOutFloatColor:		#55D2C5
+VopInOutFloatArrayColor:	#218278
+VopInOutIntColor:		#45B5FF
+VopInOutIntArrayColor:		#21668A
+VopInOutStringColor:		#CCB299
+VopInOutStringArrayColor:	#A97442
+VopInOutMatrix2Color:		#D367FF
+VopInOutMatrix2ArrayColor:	#783A91
+VopInOutMatrix3Color:		#B367FF
+VopInOutMatrix3ArrayColor:	#6A488C
+VopInOutMatrix4Color:		#7F68FE
+VopInOutMatrix4ArrayColor:	#5B5195
+VopInOutPointColor:		#EF99D5
+VopInOutBsdfColor:		#F8E71C
+VopInOutStructColor:		#DE796E
+VopInOutMethodColor:		#FF9900
+VopInOutMultiColor:		#E5E5E5
+VopErrorColor:			AXSCERROR
+
+// The colors for SHOP input output labels
+ShopInOutSurfaceColor: #e5b299
+ShopInOutShadowColor: #33334c
+ShopInOutDisplaceColor: #99b2e5
+ShopInOutGeometryColor: #b2e5b2
+ShopInOutLightColor: #e5e599
+ShopInOutFogColor: #b2b2b2
+ShopInOutPropertiesColor:  #7fcce5
+ShopInOutShaderColor: #e5e5e5
+ShopInOutImage3dColor: #66e5b2
+ShopInOutImage3dArrayColor: #4cb299
+
+// The following colors are for Dop input/output labels
+DopInOutObjectColor: #a5a5a5
+DopInOutDataColor: #7fcc7f
+DopInOutRelDataColor: #339933
+DopInOutSolverColor: #b27fe5
+DopInOutAnyColor: #e5e5e5
+
+// The following colors are for Top graph nodes
+TopInOutColor_file:         #919191
+TopInOutColor_file/image:   #55D2C5
+TopInOutColor_file/geo:     #008FEE
+TopInOutColor_file/csv:    #FF6600
+TopInOutColor_file/movie:   #5AAA00
+TopInOutColor_file/archive: #BEC43F
+TopInOutColor_nonfile:      #D05ADD
+
+// The following colors are for simple spreadsheets (ie. tables)
+SSTableBackgroundColor:	AXSCBASE
+SSTableSelectedColor:	AXSCBASETINT
+
+// The following colors are for parameter spreadsheets
+ParmSheetEmptyColor:	AXSCW60
+ParmSheetHeaderColor:	AXSCW60
+
+// The following color is used for buttons that simulate a hyper-text link
+HyperTextLinkColor:	0.0	0.0	1.0
+
+// The following colors are used to highlight the names of operators that have
+// a given property (e.g. modified parameters)
+// Houdini's list mode tries to be smart and changes the value based on
+// some arbitrary thing.  (Network BG color?)  Anyway, leaving the value
+// at one seems to force it into a happy state.
+OpNameNoneColor:	AXSCW87
+OpNameCommentsColor:	HSV 240 0.6 1
+OpNameAnimatedColor:	DUNNO
+OpNameModifiedColor:	DUNNO
+OpNameChoppedColor:	DUNNO
+OpNameSyncedColor:	HSV 200 0.6 1
+OpNameUnsyncedColor:	HSV 0   0.6 1
+OpNameSubnetColor:	HSV 240 0.3 1
+
+// The following color is used for the text in the parameter title bar that
+// indicates how many nodes are selected
+ParmTitleBarNumSelectedColor:	1.0	1.0	0.0
+
+// The following color is used for the text in the take label to indicate that
+// the auto take mode is enabled
+AutoTakeModeColor:	0.40	0.70	0.40
+
+// These colors are used by the operator type manager.
+OTLUnusedColor:	0.70	0.10	0.10
+OTLOutOfDateColor:	0.70	0.70	0.10
+OTLPreferredColor:	0.20	0.70	0.20
+
+// These colors are used by the simulation tree view.
+SIMAltRepColor:		0.20	0.70	0.20
+SIMObjectColor:		0.00	0.00	0.00
+SIMDataColor:		0.00	0.00	0.00
+SIMRelDataColor:	0.00	0.00	0.00
+SIMRecordColor:		0.00	0.00	0.00
+SIMAffectorsColor:	0.00	0.00	0.00
+SIMGroupsColor:		0.00	0.00	0.00
+SIMEngineColor:		0.00	0.00	0.00
+SIMEngineInterpColor:	0.70	0.70	0.10
+SIMAffectorColor:	0.10	0.10	0.60
+SIMMutualColor:		0.20	0.70	0.20
+SIMAlmostMutualColor:	0.70	0.70	0.10
+
+// These colors are used by the linker tree views.
+LinkerPartialLinkColor:	DUNNO
+
+// The following colors are used by the network editor in list mode
+OpListHeaderBGColor:	AXSCBASETINT
+OpListSplitterColor:	AXSCBASE
+OpListSelectionBGColor:AXSCBASETINT
+OpListSelectionFGColor:	AXSCW87
+
+// These colors are used by the file dependency dialog
+FileDepAcceptColor:		0.0 1.0 0.0
+FileDepRejectColor:		1.0 0.0 0.0
+
+// Colors for the shaded pick box
+ShadedPickOutline: 	      0.6 0.6 0.6
+ShadedPickInnerLine: 	      0.3 0.3 0.3
+ShadedPickFill:		      0.2 0.2 0.2
+
+// Hotkey Editor keyboard --------------------------------------------
+
+KeyCapUnavailableFill: #323232
+KeyCapUnavailableHover: #424242
+
+KeyCapAssignedFill: #515151
+KeyCapAssignedHover: #616161
+
+KeyCapDefaultFill: #858585
+KeyCapDefaultHover: #959595
+
+ModifierKeyOffFill: #292929
+ModifierKeyOffHover: #393939
+
+KeyCapSelectionBorder: AXSCW87
+KeyCapSelectionText: AXSCW87
+
+ShiftKeyBorder: #7F5050
+ShiftKeyFill: #AF7070
+ShiftKeyHilite: #CF9090
+
+CtrlKeyBorder: #436892
+CtrlKeyFill: #5883B4
+CtrlKeyHilite: #78A3D4
+
+AltKeyBorder: #658245
+AltKeyFill: #8EA37D
+AltKeyHilite: #AEC39D
+
+CmdKeyBorder: #9A7B49
+CmdKeyFill: #BBAB28
+CmdKeyHilite: #DBCB48
+
+// Scene Graph Panes --------------------------------------------
+
+UsdLocationHasArcs	#3E9E2E
+UsdLocationIsInstance	#87CEFA
+UsdLocationInMaster	#7688D9
+UsdLocationUnloaded	#5E2E15
+UsdLocationLoaded	#DE9E2E
+UsdLayerMuted		#9090E0
+UsdLayerHasOpinion	#E07000
+UsdLayerChildHasOpinion	#A04000
+
+UsdAttrResolveFallback:		#DE9E2E
+UsdAttrResolveDefault:		#87CEFA
+UsdAttrResolveValueClips:	#E696E6
+UsdAttrResolveTimeSamples:	#B1CF99
+UsdAttrResolveNone:		grey50
+UsdProperty:			#E68484
+UsdComputed:			#8484E6
+
