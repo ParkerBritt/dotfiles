@@ -11,7 +11,6 @@ alias files='nohup thunar > /dev/null 2>&1 &'
 alias calc="qalc"
 alias yay="yay --color always"
 alias clip="xsel -b"
-alias python="python3.11"
 # alias clip="wl-copy"
 alias clip-dir="pwd | clip"
 alias cal="calcure"
