@@ -1,138 +1,46 @@
 format = """
-$sudo\
-[ ](bg:#33658A)\
+[](#3B4252)\
 $directory\
-$shell\
-$env_var\
-$username\
-[ ](fg:#33658A)\
-"""
-
-right_format = """
-[](fg:#33658A)\
-$singularity\
-$kubernetes\
-$vcsh\
-$fossil_branch\
+[](bg:#4C566A fg:#3B4252)\
 $git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
 $git_status\
-$hg_branch\
-$pijul_channel\
-$docker_context\
-$package\
+[](fg:#4C566A bg:#4f95c8)\
+$environment\
 $c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
 $elixir\
 $elm\
-$erlang\
-$fennel\
 $golang\
-$guix_shell\
 $haskell\
-$haxe\
-$helm\
 $java\
 $julia\
-$kotlin\
-$gradle\
-$lua\
-$nim\
 $nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$raku\
-$rlang\
-$red\
-$ruby\
+$nim\
 $rust\
-$scala\
-$solidity\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$crystal\
-$custom\
-$jobs\
-$status\
-$container\
-$os\
+[](fg:#4f95c8 bg:#86BBD8)\
+$docker_context\
+[ ](fg:#86BBD8)\
+\n[ ](fg:#4f95c8)\
 """
+command_timeout = 5000
+# Disable the blank line at the start of the prompt
+# add_newline = false
 
-add_newline = true
-
-[character]
-format = "$symbol "
-success_symbol = "[](blue)"
-error_symbol = "[](red)"
-
-[env_var.VIMSHELL] # vim subshell
-format = "[$env_value]($style)"
-style = 'green italic'
-
-[os]
-disabled = false
-style = "bg:#33658A"
-
-[os.symbols]
-Arch = "󰣇 "
-Debian = " "
-Linux = "󰌽 "
-NixOS = " "
-Fedora = " "
-RockyLinux = " "
-Ubuntu = " "
-Unknown = "󰌽 "
-
-[cmake]
-format = "[ $symbol]($style)"
-style = "bg:#33658A"
-symbol = ""
-
-[sudo]
-style = "bg:#244A66"
-format = "[$symbol]($style)[](fg:#244A66 bg:#33658A)"
-symbol = " "
-disabled = false
-
+# You can also replace your username with a neat symbol like  to save some space
 [username]
-style_user = "yellow bold"
-style_root = "purple bold italic"
-format = "[$user]($style) ▻ "
-disabled = false
+show_always = true
+style_user = "bg:#3B4252"
+style_root = "bg:#3B4252"
+format = '[$user ]($style)'
 
 [directory]
-home_symbol = "󰋜 "
-truncation_length = 2
-# truncation_symbol = "▦ "
-# read_only = " ■"
-style = "bg:#33658A"
-format = '[$read_only]($style)[$path]($style)'
+home_symbol = "󰋜"
+style = "bg:#3B4252"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
 "Documents" = "󰈙"
 "Downloads" = " "
@@ -142,164 +50,78 @@ format = '[$read_only]($style)[$path]($style)'
 ".config" = " conf"
 "dotfiles" = " dot"
 "cog_software" = " cog"
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
 
-[cmd_duration]
-min_time = 500
-format = "[$duration ](italic bright-yellow)"
+[c]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
 
-[jobs]
-format = "[ $symbol$number]($style)"
-style = "white"
-symbol = "[▶ ](blue italic)"
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
 
-[localip]
-ssh_only = true
-format = " ◯[$localipv4](bold magenta)"
-disabled = false
+[elixir]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#4C566A"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#4C566A"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
-format = "[ $time]($style)"
-time_format = "%R"
-utc_time_offset = "local"
-style = "bg:#33658A"
-
-[battery]
-format = "[ $percentage $symbol](bg:#33658A)"
-full_symbol = "[█](bg:#33658A italic green)"
-charging_symbol = "[↑](bg:#33658A italic green)"
-discharging_symbol = "[↓](bg:#33658A italic)"
-unknown_symbol = "[░](bg:#33658A italic)"
-empty_symbol = "[▃](bg:#33658A italic red)"
-
-[[battery.display]]
-threshold = 70
-style = "dimmed white"
-
-[git_branch]
-format = "[ $symbol $branch(:$remote_branch) ]($style)"
-symbol = "[](bg:#33658A)"
-style = "bg:#33658A"
-
-[git_status]
-style = "bg:#33658A"
-format = """([$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed]($style))"""
-conflicted = "[◪◦](italic bright-magenta)"
-ahead = "[▲[${count}](bg:#33658A)](bg:#33658A)"
-behind = "[▽│[${count}](bold white)│](italic red)"
-diverged = "[◇ ▲┤[${ahead_count}](regular white)│▽┤[${behind_count}](regular white)│](italic bright-magenta)"
-untracked = "[󰦁 ${count}](bg:#33658A)"
-stashed = "[󰴮](bg:#33658A)"
-modified = "[󰷩 ${count}](bg:#33658A)"
-staged = "[ [$count](bg:#33658A)⎥](bg:#33658A)"
-renamed = "[◎◦](italic bright-blue)"
-deleted = "[✕](italic red)"
-
-[deno]
-format = " deno [∫ $version](blue italic)"
-version_format = "${major}.${minor}"
-
-[lua]
-format = " lua [${symbol}${version}]($style)"
-symbol = "⨀ "
-style = "italic bright-yellow"
-
-[nodejs]
-format = " node [◫ ($version)](italic bright-green)"
-detect_files = ["package-lock.json", "yarn.lock"]
-version_format = "${major}.${minor}"
-
-[python]
-format = " py [${symbol}${version}]($style)"
-symbol = "[⌉](italic bright-blue)⌊ "
-version_format = "${major}.${minor}"
-style = "italic bright-yellow"
-
-[ruby]
-format = " rb [${symbol}${version}]($style)"
-symbol = "◆ "
-version_format = "${major}.${minor}"
-style = "italic red"
-
-[rust]
-format = " rs [$symbol$version]($style)"
-symbol = "⊃ "
-version_format = "${major}.${minor}"
-style = "italic red"
-
-[package]
-format = " pkg [$symbol$version]($style)"
-version_format = "${major}.${minor}"
-symbol = "◫ "
-style = "bright-yellow italic"
-
-[swift]
-format = " sw [${symbol}${version}]($style)"
-symbol = "◁ "
-style = "italic bright-red"
-version_format = "${major}.${minor}"
-
-[aws]
-format = " aws [$symbol $profile $region]($style)"
-style = "italic blue"
-symbol = "▲ "
-
-[buf]
-symbol = "■ "
-format = " buf [$symbol $version $buf_version]($style)"
-
-[c]
-symbol = "∁ "
-format = " c [$symbol($version(-$name))]($style)"
-
-[conda]
-symbol = "◯ "
-format = " conda [$symbol$environment]($style)"
-
-[dart]
-symbol = "◁◅ "
-format = " dart [$symbol($version )]($style)"
-
-[docker_context]
-symbol = "◧ "
-format = " docker [$symbol$context]($style)"
-
-[elixir]
-symbol = "△ "
-format = " exs [$symbol $version OTP $otp_version ]($style)"
-
-[elm]
-symbol = "◩ "
-format = " elm [$symbol($version )]($style)"
-
-[golang]
-symbol = "∩ "
-format = " go [$symbol($version )]($style)"
-
-[haskell]
-symbol = "❯λ "
-format = " hs [$symbol($version )]($style)"
-
-[java]
-symbol = "∪ "
-format = " java [${symbol}(${version} )]($style)"
-
-[julia]
-symbol = "◎ "
-format = " jl [$symbol($version )]($style)"
-
-[memory_usage]
-symbol = "▪▫▪ "
-format = " mem [${ram}( ${swap})]($style)"
-
-[nim]
-symbol = "▴▲▴ "
-format = " nim [$symbol($version )]($style)"
-
-[nix_shell]
-symbol = "⊛ "
-format = " nix [$symbol$state $name]($style)"
-
-[spack]
-symbol = "◇ "
-format = " spack [$symbol$environment]($style)"
+time_format = "%R" # Hour:Minute Format
+style = "bg:#4f95c8"
+format = '[ $time ]($style)'
