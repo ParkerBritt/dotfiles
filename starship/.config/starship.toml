@@ -16,6 +16,7 @@ $julia\
 $nodejs\
 $nim\
 $rust\
+$python\
 [](fg:#4f95c8 bg:#86BBD8)\
 $docker_context\
 [ ](fg:#86BBD8)\
@@ -60,6 +61,11 @@ truncation_symbol = "…/"
 symbol = " "
 style = "bg:#4f95c8"
 format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:#4f95c8"
+format = '[ $symbol ($version) venv]($style)'
 
 [docker_context]
 symbol = " "
