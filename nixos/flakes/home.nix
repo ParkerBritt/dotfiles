@@ -7,13 +7,22 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     cowsay
-    glow
   ];
 
   programs.git = {
     enable = true;
     userName = "parker";
     userEmail = "parker@parkerbritt.com";
+  };
+
+   
+  # theme
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Materia-dark";
+      package = pkgs.materia-theme;
+    };
   };
 
 
