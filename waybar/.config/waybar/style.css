@@ -125,8 +125,35 @@ tooltip label {
     margin: 0px 7px;
     padding: 0px 5px;
 }
-#workspaces button.active label{
-    color: rgba(255, 255, 255, 0.9);
+@keyframes workspace_switch_active {
+    from{
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0px;
+    }
+    to {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+    }
+}
+@keyframes workspace_switch_inactive {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+#workspaces button.active label {
+    animation-name: workspace_switch_active;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    font-size: 14px;
+}
+#workspaces button:not(.active) label {
+    animation-name: workspace_switch_inactive;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 #workspaces button{
     margin: 0 2px;
@@ -135,7 +162,8 @@ tooltip label {
     
 }
 #workspaces button label{
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #temperature.critical,
