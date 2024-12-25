@@ -108,9 +108,9 @@ window#waybar.empty #workspaces button.active{
 
 tooltip {
   border-radius: 15px;
-  background: #1a1a1a;
+  /* background: #1a1a1a; */
+  background: rgba(26, 27, 38, 0.9);
   padding: 0px;
-  border: 2px solid rgb(100, 114, 125);
 }
 tooltip label {
   padding: 0px;
