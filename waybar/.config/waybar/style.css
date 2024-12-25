@@ -74,12 +74,19 @@ window#waybar.fullscreen #status_items,
 window#waybar.fullscreen #tray_grp{
   padding-top: 0px;
   padding-bottom: 0px;
-  background: rgba(26, 27, 38, 1);
-  border-radius: 10px;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   margin-top: 0px;
   margin-bottom: 4px;
 }
+
+/* fade out other modules while center module expands */
+window#waybar.fullscreen .modules-left,
+window#waybar.fullscreen #status_items,
+window#waybar.fullscreen #tray_grp{
+  background: rgba(26, 27, 38, 0);
+  transition: background 0.4s ease-in-out 0.1s;
+}
+
 
 window#waybar.fullscreen .modules-center{
     padding: 0px 500px 0px 500px;
