@@ -8,6 +8,15 @@
 window#waybar {
   background: transparent;
   margin: 5px;
+
+  /* transition to fullscreen */
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+}
+
+/* show background on fullscreen */
+window#waybar.fullscreen{
+  background: rgba(26, 27, 38, 1);
 }
 
 
@@ -55,6 +64,9 @@ window#waybar {
     box-shadow: 0px 2px 4px rgba(0,0,0,0.6);
     transition-duration: 0.05s;
 }
+.modules-center{
+  transition-duration: 0.5s;
+}
 
 window#waybar.fullscreen .modules-left,
 window#waybar.fullscreen .modules-center,
@@ -64,9 +76,15 @@ window#waybar.fullscreen #tray_grp{
   padding-bottom: 0px;
   background: rgba(26, 27, 38, 1);
   border-radius: 10px;
-  box-shadow: 0px 0px;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
   margin-top: 0px;
   margin-bottom: 4px;
+}
+
+window#waybar.fullscreen .modules-center{
+    transition-duration: 0.5s;
+    padding-right: 500px;
+    padding-left: 500px;
 }
 
 window#waybar.empty .modules-left,
@@ -126,30 +144,19 @@ tooltip label {
     margin: 0px 7px;
     padding: 0px 5px;
 }
-@keyframes workspace_switch_active {
-    from{
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0px;
-    }
-    to {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 14px;
-    }
-}
+
+/* animation for when a workspace gets switched off of */
 @keyframes workspace_switch_inactive {
     0% {
         color: rgba(255, 255, 255, 0);
     }
     100% {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
 #workspaces button.active label {
-    animation-name: workspace_switch_active;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-    font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
 }
 #workspaces button:not(.active) label {
     animation-name: workspace_switch_inactive;
@@ -164,7 +171,7 @@ tooltip label {
 }
 #workspaces button label{
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #temperature.critical,
