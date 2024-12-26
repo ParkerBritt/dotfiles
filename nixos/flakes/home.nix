@@ -17,13 +17,24 @@
 
    
   # theme
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Materia-dark";
-      package = pkgs.materia-theme;
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Colloid-Dark";
+        package = pkgs.colloid-gtk-theme.override {
+        # no current overrides
+        # tweaks = [ "catppuccin" ];
+        };
+      };
+      cursorTheme = {
+        package = pkgs.gnome.adwaita-icon-theme;
+        name = "Adwaita";
+      };
+      iconTheme = {
+        package = pkgs.papirus-icon-theme;
+        name = "Papirus-Dark";
+      };
     };
-  };
 
 
   # This value determines the home Manager release that your
