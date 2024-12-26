@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   home.username = "parker";
@@ -20,10 +20,9 @@
     gtk = {
       enable = true;
       theme = {
-        name = "Colloid-Dark";
-        package = pkgs.colloid-gtk-theme.override {
-        # no current overrides
-        # tweaks = [ "catppuccin" ];
+        name = "Colloid-Dark-Catppuccin";
+        package = pkgs-unstable.colloid-gtk-theme.override {
+        tweaks = [ "catppuccin" ];
         };
       };
       cursorTheme = {

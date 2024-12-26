@@ -4,17 +4,19 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/24.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager = {
         url = "github:nix-community/home-manager/release-24.05";
         inputs.nixpkgs.follows = "nixpkgs"; # Use the same nixpkgs input as your flake
     };
   };
 
-  outputs = {self,nixpkgs,home-manager, ...}:
+  outputs = {self, nixpkgs, nixpkgs-unstable , home-manager, ...}:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
     in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
@@ -41,7 +43,10 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
 
-                home-manager.users.parker = import ./home.nix;
+                home-manager.users.parker = import ./home.nix{
+                    pkgs = pkgs;
+                    pkgs-unstable = pkgs-unstable;
+                };
               }
           ];
       };
