@@ -108,5 +108,16 @@
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
   # virtualisation.docker.enable = true;
+
+  # flatpak repo setup
+  services.flatpak.enable = true;
+  systemd.services.flatpak-repo = {
+  wantedBy = [ "multi-user.target" ];
+  path = [ pkgs.flatpak ];
+  script = ''
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  '';
+  };
+
 }
 
