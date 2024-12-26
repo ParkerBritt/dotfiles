@@ -22,7 +22,7 @@
       theme = {
         name = "Colloid-Dark-Catppuccin";
         package = pkgs-unstable.colloid-gtk-theme.override {
-        tweaks = [ "catppuccin" ];
+        tweaks = [ "catppuccin" "rimless"];
         };
       };
       cursorTheme = {
