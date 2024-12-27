@@ -107,7 +107,7 @@
 
 
   programs.hyprland.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
   services.udisks2.enable = true;
   programs.dconf.enable = true;
@@ -115,7 +115,7 @@
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
-  xdg.portal.wlr.enable = true;
+  # xdg.portal.wlr.enable = true;
   # virtualisation.docker.enable = true;
 
   # flatpak repo setup
