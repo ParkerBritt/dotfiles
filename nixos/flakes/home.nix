@@ -26,15 +26,24 @@
         };
       };
       cursorTheme = {
-        package = pkgs.gnome.adwaita-icon-theme;
-        name = "Adwaita";
+        name = "Catppuccin-Mocha-Light-Cursors";
+        package = pkgs.catppuccin-cursors.mochaLight;
+        size = 16;
       };
-      iconTheme = {
-        package = pkgs.papirus-icon-theme;
-        name = "Papirus-Dark";
-      };
+      # iconTheme = {
+      #   package = pkgs.papirus-icon-theme;
+      #   name = "Papirus-Dark";
+      # };
     };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    # package = pkgs.kdePackages.breeze-icons;
+    # name = "Breeze Dark";
+    name = "Catppuccin-Mocha-Light-Cursors";
+    package = pkgs.catppuccin-cursors.mochaLight;
+    size = 16;
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

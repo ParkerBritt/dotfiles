@@ -19,6 +19,7 @@
     vlc
     libreoffice
     moonlight-qt
+    obs-studio
 
     # shell tool
     du-dust
@@ -47,6 +48,9 @@
     wireguard-tools
     networkmanagerapplet
     zed-editor
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
 
     # utility
     jq
@@ -70,6 +74,7 @@
     udiskie
     peek
     tree
+    xfce.thunar
 
     # hyprland
     pyprland
@@ -101,12 +106,16 @@
 ];
 
 
+  programs.hyprland.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
   services.udisks2.enable = true;
   programs.dconf.enable = true;
   security.polkit.enable = true;
   # allow standard binaries to run in nix
   programs.nix-ld.enable = true;
   programs.steam.enable = true;
+  xdg.portal.wlr.enable = true;
   # virtualisation.docker.enable = true;
 
   # flatpak repo setup
