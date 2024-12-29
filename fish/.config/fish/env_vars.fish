@@ -6,7 +6,7 @@ if not contains "$HOME/.cargo/bin" $PATH
     set -gx PATH $HOME/.cargo/bin $PATH
 end
 
-set -gx PATH /opt/hfs19.5.605/bin $PATH
+set -gx PATH /opt/hfs20.5.332/bin $PATH
 
 # rez
 set -gx PATH /home/parker/programs/rez/bin/rez $PATH
