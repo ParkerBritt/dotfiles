@@ -47,7 +47,8 @@ alias back-remote="restic --repository-file ~/.config/restic/b2-credentials/repo
 alias back-local="restic --repository-file ~/.config/restic/local-credentials/repository --password-file ~/.config/restic/local-credentials/key"
 
 # git
-alias gs="git status"
+alias gs="git fetch && git status"
+alias gss="git status"
 
 # go up
 alias ...='cd ../..'
