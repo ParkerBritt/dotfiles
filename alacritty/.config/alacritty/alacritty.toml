@@ -24,7 +24,7 @@ foreground = "0xD8DEE9"
 
 [font]
 normal = { family = "MesloLGM Nerd Font", style = "Normal" }
-size = 12
+size = 14
 
 [window]
 opacity = 0.9
