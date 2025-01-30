@@ -99,6 +99,7 @@
     boost
     clang-tools
     nginx
+    mongosh
 
     # npm
     nodePackages.live-server
