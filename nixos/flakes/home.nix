@@ -38,11 +38,12 @@
 
   home.pointerCursor = {
     gtk.enable = true;
+    x11.enable = true;
     # package = pkgs.kdePackages.breeze-icons;
     # name = "Breeze Dark";
     name = "Catppuccin-Mocha-Light-Cursors";
     package = pkgs.catppuccin-cursors.mochaLight;
-    size = 16;
+    size = 28;
   };
 
   # This value determines the home Manager release that your

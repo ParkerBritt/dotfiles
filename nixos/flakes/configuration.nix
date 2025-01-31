@@ -22,6 +22,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+
+  # cursor fix ( can't remember if it actually fixes cursor size)
+  services.xserver.dpi = 220;
+  services.xserver.upscaleDefaultCursor = true;
+  environment.variables = {
+    GDK_SCALE = "2.2";
+    GDK_DPI_SCALE = "0.4";
+    _JAVA_OPTIONS = "-Dsun.java2d.uiScale=2.2";
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    XCURSOR_SIZE = "64";
+  };
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
