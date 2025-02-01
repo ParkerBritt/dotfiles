@@ -68,7 +68,7 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-            qdbus org.kde.Shutdown /Shutdown logout
+            hyprctl dispatch exit
 		fi
 	else
 		exit 0
