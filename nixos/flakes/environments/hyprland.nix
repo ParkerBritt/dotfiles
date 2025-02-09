@@ -4,7 +4,7 @@
         ./wayland.nix
     ];
     environment.systemPackages = with pkgs; [
-        gnome.gdm
+        gdm
         hyprland
         wayland
         hyprpaper
