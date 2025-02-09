@@ -15,6 +15,7 @@
         nginx
         mongosh
         nodejs_22
+        uv
 
         # npm
         nodePackages.live-server
