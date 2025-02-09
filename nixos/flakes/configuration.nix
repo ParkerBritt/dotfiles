@@ -11,6 +11,7 @@
       ./firewall.nix
       ./fonts.nix
       ./packages/general.nix
+      ./packages/development.nix
       ./packages/fish.nix
       ./packages/options.nix
       ./activation-scripts.nix

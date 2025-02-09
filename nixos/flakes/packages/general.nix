@@ -87,23 +87,6 @@
     awf
     nwg-look
 
-    # programming
-    python311Full
-    python311Packages.pip
-    pipx
-    poetry
-    libgcc
-    gcc
-    cmake
-    gnumake
-    boost
-    clang-tools
-    nginx
-    mongosh
-
-    # npm
-    nodePackages.live-server
-    nodePackages.browser-sync
 ];
 
 

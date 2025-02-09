@@ -1,0 +1,23 @@
+{ pkgs, ... }:
+{
+    environment.systemPackages = with pkgs; [
+        # programming
+        python311Full
+        python311Packages.pip
+        pipx
+        poetry
+        libgcc
+        gcc
+        cmake
+        gnumake
+        boost
+        clang-tools
+        nginx
+        mongosh
+        nodejs_22
+
+        # npm
+        nodePackages.live-server
+        nodePackages.browser-sync
+    ];
+}
