@@ -4,6 +4,7 @@
         # programming
         python311Full
         python311Packages.pip
+        python311Packages.uv
         pipx
         poetry
         libgcc
@@ -15,7 +16,6 @@
         nginx
         mongosh
         nodejs_22
-        uv
 
         # npm
         nodePackages.live-server
