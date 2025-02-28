@@ -75,6 +75,9 @@
     peek
     tree
     xfce.thunar
+    ripgrep
+    lsof
+    wakeonlan
 
     # hyprland
     pyprland
