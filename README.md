@@ -11,10 +11,7 @@
 Personal dotfiles I use on Linux.
 I've experimented with my environment for various reasons so it might be a bit all over the place.
 
-### Terminal
-![image](screenshots/terminal.png)
-### Fetch
-![image](screenshots/fetch.png)
+
 ### Neovim
 ![image](screenshots/neovim.png)
 ### Awesome WM
