@@ -1,11 +1,12 @@
 <h1 align="center">Dotfiles</h1>
 <p align="center"}>
-  <img src="https://img.shields.io/badge/-Rocky-10B981?style=for-the-badge&logo=rockylinux&logoColor=10B981&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Arch-1793D1?style=for-the-badge&logo=archlinux&logoColor=1793D1&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Nixos-5277C3?style=for-the-badge&logo=nixos&logoColor=5277C3&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Fedora-51A2DA?style=for-the-badge&logo=fedora&logoColor=51A2DA&labelColor=282828"><br>
-  <img src="https://img.shields.io/badge/-Hyprland-00b9e9?style=for-the-badge&logoColor=51A2DA&labelColor=282828&logo=hyprland">
-  <img src="https://img.shields.io/badge/-KDE-1D99F3?style=for-the-badge&logoColor=1D99F3&labelColor=282828&logo=kdeplasma">
+<a href="https://rockylinux.org/"><img src="https://parkerbritt.com/badge?label=Rocky&icon=rockylinux&color=10B981"></a>
+<a href="https://archlinux.org/"><img src="https://parkerbritt.com/badge?label=Arch&icon=archlinux&color=1793D1"></a>
+<a href="https://nixos.org/"><img src="https://parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
+<a href="https://getfedora.org/"><img src="https://parkerbritt.com/badge?label=Fedora&icon=fedora&color=51A2DA"></a>
+<br>
+<a href="https://github.com/hyprwm/Hyprland"><img src="https://parkerbritt.com/badge?label=Hyprland&icon=hyprland&color=00b9e9"></a>
+<a href="https://kde.org/plasma-desktop/"><img src="https://parkerbritt.com/badge?label=KDE&icon=kdeplasma&color=1D99F3"></a>
 </p>
 
 Personal dotfiles I use on Linux.
