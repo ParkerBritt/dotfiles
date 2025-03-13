@@ -12,12 +12,13 @@
 Personal dotfiles I use on Linux.
 I've experimented with my environment for various reasons so it might be a bit all over the place.
 
-
+### Hyprland
+![image](https://parkerbritt.com/thumbor/unsafe/filters:round_corner(40,0,0,0,1)/raw.githubusercontent.com/ParkerBritt/dotfiles/main/screenshots/hyprland.png)
+### KDE
+![image](screenshots/kde_01.png)
 ### Neovim
 ![image](screenshots/neovim.png)
 ### Awesome WM
 ![image](screenshots/awesomewm.png)
-### Hyprland
-![image](screenshots/hyprland.png)
-### KDE
-![image](screenshots/kde_01.png)
+
+
