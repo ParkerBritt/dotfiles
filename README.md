@@ -21,7 +21,10 @@ I've experimented with my environment for various reasons so it might be a bit a
 <img align="right" src="https://parkerbritt.com/badge?label=KDE&icon=kdeplasma&color=1D99F3">
 
 ![image](screenshots/kde_01.png)
-### Neovim
+
+
+<br><img src="https://parkerbritt.com/badge?label=Neovim&icon=neovim&color=57A143"></a>
+
 ![image](screenshots/neovim.png)
 ### Awesome WM
 ![image](screenshots/awesomewm.png)
