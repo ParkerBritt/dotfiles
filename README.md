@@ -26,7 +26,9 @@ I've experimented with my environment for various reasons so it might be a bit a
 <br><img src="https://parkerbritt.com/badge?label=Neovim&icon=neovim&color=57A143"></a>
 
 ![image](screenshots/neovim.png)
-### Awesome WM
+
+
+<br><img src="https://parkerbritt.com/badge?label=awesomewm&icon=awesomewm&color=535D6C"></a>
 ![image](screenshots/awesomewm.png)
 
 
