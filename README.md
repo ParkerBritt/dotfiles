@@ -28,7 +28,8 @@ I've experimented with my environment for various reasons so it might be a bit a
 ![image](screenshots/neovim.png)
 
 
-<br><img src="https://parkerbritt.com/badge?label=awesomewm&icon=awesomewm&color=535D6C"></a>
+<br><img src="https://parkerbritt.com/badge?label=arch&icon=archlinux&color=1793D1"></a>
+<img align="right" src="https://parkerbritt.com/badge?label=awesomewm&icon=awesomewm&color=535D6C">
 ![image](screenshots/awesomewm.png)
 
 
