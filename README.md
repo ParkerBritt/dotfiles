@@ -9,8 +9,7 @@
 <a href="https://kde.org/plasma-desktop/"><img src="https://parkerbritt.com/badge?label=KDE&icon=kdeplasma&color=1D99F3"></a>
 </p> -->
 
-Personal dotfiles I use on Linux.
-I've experimented with my environment for various reasons so it might be a bit all over the place.
+Personal dotfiles I use on Linux across different distros and desktop environments.
 
 <img src="https://parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
 <img align="right" src="https://parkerbritt.com/badge?label=Hyprland&icon=hyprland&color=00b9e9">
