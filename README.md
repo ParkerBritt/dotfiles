@@ -11,7 +11,7 @@
 
 Personal dotfiles I use on Linux across different distros and desktop environments.
 
-<img src="https://parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
+<a href="https://github.com/ParkerBritt/dotfiles/tree/main/nixos"><img src="https://parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
 <img align="right" src="https://parkerbritt.com/badge?label=Hyprland&icon=hyprland&color=00b9e9">
 
 ![image](https://parkerbritt.com/thumbor/unsafe/filters:round_corner(40,0,0,0,1)/raw.githubusercontent.com/ParkerBritt/dotfiles/main/screenshots/hyprland.png)
