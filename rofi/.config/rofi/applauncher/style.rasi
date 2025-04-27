@@ -17,6 +17,8 @@ window {
   width: 20%;
   background-color: @bg;
   border-radius:  24px;
+  border:         1px;
+  border-color:   rgba(188, 185, 202, 0.1);
   anchor: north;
   y-offset: -230;
   location: center;
@@ -60,7 +62,7 @@ inputbar {
   children: [prompt, entry];
   background-color: @bg;
   border-radius:  24px;
-  border:         2px;
+  border:         1px;
   border-color:       @bg-selected;
 }
 
@@ -70,13 +72,26 @@ listview {
   columns: 1;
   fixed-rows: false;
   fixed-height: false;
-  // require-input: true;
+  require-input: true;
   lines: 8;
   padding: 6 0 3 0;
 }
 
+// for calc
+textbox {
+  background-color: transparent;
+  text-color: @fg;
+  padding: 10 15 10 5;
+  vertical-align: 0.5;
+}
+
+// for calc
+message {
+  background-color: transparent;
+}
+
 mainbox {
-  children: [inputbar, listview];
+  children: [inputbar, listview, message];
   background-color: @bg;
   padding:    3 3 3 3 px;
 }
