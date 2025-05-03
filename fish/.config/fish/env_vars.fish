@@ -38,3 +38,5 @@ set -gx rofi_background_opacity 0.5
 set -gx DISTRO_NAME $(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)
 set -gx DISTRO_ICON $(distro_icon)
 
+# maya dependency bug
+set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH $HOME/maya_fake_env/lib
