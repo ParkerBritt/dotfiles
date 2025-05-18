@@ -19,6 +19,10 @@ vim.opt.softtabstop = 4   -- Number of spaces that a <Tab> counts for while perf
 vim.opt.expandtab = true  -- Use spaces instead of tabs
 
 lvim.plugins = {
+    {
+      "smjonas/inc-rename.nvim",
+      opts = {}
+    },
 	{
 	  "jiaoshijie/undotree",
 	  dependencies = "nvim-lua/plenary.nvim",
