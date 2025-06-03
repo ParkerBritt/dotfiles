@@ -65,6 +65,7 @@
     cliphist
     exiftool
     imv
+    eog
     bindfs
     tldr
     imagemagick
