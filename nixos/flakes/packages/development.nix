@@ -16,6 +16,7 @@
         mongosh
         nodejs_22
         uv
+        SDL2
 
         # npm
         nodePackages.live-server
