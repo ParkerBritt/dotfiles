@@ -125,8 +125,6 @@ i18n = {
     # shell = pkgs.fish;
     packages = with pkgs; [
       firefox
-      kate
-    #  thunderbird
     ];
   };
 

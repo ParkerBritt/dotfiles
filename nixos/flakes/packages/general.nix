@@ -10,14 +10,14 @@
   environment.systemPackages = with pkgs; [
     # gui
     alacritty
-    gparted
-    discord
+    # gparted
     shell-gpt
     kitty
-    spotify
-    signal-desktop
+    ghostty
+    # spotify
+    # signal-desktop
     vlc
-    libreoffice
+    # libreoffice
     moonlight-qt
     obs-studio
 
@@ -47,7 +47,6 @@
     openvpn
     wireguard-tools
     networkmanagerapplet
-    zed-editor
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
@@ -70,10 +69,9 @@
     tldr
     imagemagick
     ffmpeg-full
-    vesktop
+    # vesktop
     polkit
     udiskie
-    peek
     tree
     xfce.thunar
     ripgrep

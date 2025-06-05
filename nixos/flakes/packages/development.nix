@@ -5,18 +5,19 @@
         # python311Packages.pip
         # python311Packages.uv
         # pipx
-        poetry
+        # poetry
         libgcc
+        zed-editor
         gcc
         cmake
         gnumake
         boost
         clang-tools
-        nginx
-        mongosh
+        # nginx
+        # mongosh
         nodejs_22
         uv
-        SDL2
+        # SDL2
 
         # npm
         nodePackages.live-server

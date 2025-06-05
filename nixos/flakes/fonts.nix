@@ -11,14 +11,12 @@
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
+
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
+      nerd-fonts.hurmit
+      nerd-fonts.meslo-lg
+      nerd-fonts.jetbrains-mono
     
-      # nerdfonts
-      (nerdfonts.override { fonts = [
-        "FiraCode"
-        "DroidSansMono"
-        "Hermit"
-        "Meslo"
-        "JetBrainsMono"
-      ];})
     ];
 }

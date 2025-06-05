@@ -4,8 +4,8 @@
         ./wayland.nix
     ];
     environment.systemPackages = with pkgs; [
-        gdm
         hyprland
+        gdm
         wayland
         hyprpaper
         wl-clipboard
