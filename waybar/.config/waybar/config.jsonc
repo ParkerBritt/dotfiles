@@ -90,9 +90,9 @@
             "critical": 20,
             "very-critical": 10
         },
-        "format": "{icon}  <span size='9pt' weight='bold'>{capacity}</span>",
-        "format-charging": "󰂄  <span size='9pt' weight='bold'>{capacity}</span>",
-        "format-plugged": "󰂄  <span size='9pt' weight='bold'>{capacity}</span>",
+        "format": "{icon}  <span size='15pt' weight='bold'>{capacity}</span>",
+        "format-charging": "󰂄  <span size='15pt' weight='bold'>{capacity}</span>",
+        "format-plugged": "󰂄  <span size='15pt' weight='bold'>{capacity}</span>",
         "format-icons": [
           "󰁺",
           "󰁻",
@@ -142,7 +142,7 @@
  },
 
 "pulseaudio": {
-  "format": "{icon}  <span size='9pt' weight='bold'>{volume}</span>",
+  "format": "{icon}  <span size='15pt' weight='bold'>{volume}</span>",
   "format-bluetooth":"󰂰",
   "format-muted": "<span font='12'></span>",
   "format-icons": {
