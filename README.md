@@ -11,20 +11,20 @@
 
 Personal dotfiles I use on Linux across different distros and desktop environments.
 
-<a href="https://github.com/ParkerBritt/dotfiles/tree/main/nixos"><img src="https://parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
-<img align="right" src="https://parkerbritt.com/badge?label=Hyprland&icon=hyprland&color=00b9e9">
+<a href="https://github.com/ParkerBritt/dotfiles/tree/main/nixos"><img src="https://cards.parkerbritt.com/badge?label=NixOS&icon=nixos&color=5277C3"></a>
+<img align="right" src="https://cards.parkerbritt.com/badge?label=Hyprland&icon=hyprland&color=00b9e9">
 
-![image](https://parkerbritt.com/thumbor/unsafe/filters:round_corner(40,0,0,0,1)/raw.githubusercontent.com/ParkerBritt/dotfiles/main/screenshots/hyprland.png)
+![image](screenshots/hyprland.png)
 
-<br><img src="https://parkerbritt.com/badge?label=Fedora&icon=fedora&color=51A2DA"></a>
-<img align="right" src="https://parkerbritt.com/badge?label=KDE&icon=kdeplasma&color=1D99F3">
+<br><img src="https://cards.parkerbritt.com/badge?label=Fedora&icon=fedora&color=51A2DA"></a>
+<img align="right" src="https://cards.parkerbritt.com/badge?label=KDE&icon=kdeplasma&color=1D99F3">
 
 ![image](screenshots/kde_01.png)
 
-<br><img src="https://parkerbritt.com/badge?label=arch&icon=archlinux&color=1793D1"></a>
-<img align="right" src="https://parkerbritt.com/badge?label=awesomewm&icon=awesomewm&color=535D6C">
+<br><img src="https://cards.parkerbritt.com/badge?label=arch&icon=archlinux&color=1793D1"></a>
+<img align="right" src="https://cards.parkerbritt.com/badge?label=awesomewm&icon=awesomewm&color=535D6C">
 ![image](screenshots/awesomewm.png)
 
-<br><img src="https://parkerbritt.com/badge?label=Neovim&icon=neovim&color=57A143"></a>
+<br><img src="https://cards.parkerbritt.com/badge?label=Neovim&icon=neovim&color=57A143"></a>
 
 ![image](screenshots/neovim.png)
