@@ -138,6 +138,10 @@ tooltip label {
     padding: 0px 5px;
 }
 
+#workspaces button:hover{
+    border: none;
+}
+
 /* animation for when a workspace gets switched off of */
 @keyframes workspace_switch_inactive {
     0% {
