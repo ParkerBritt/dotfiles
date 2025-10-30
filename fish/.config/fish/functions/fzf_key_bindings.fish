@@ -1,1 +1,0 @@
-/home/parker/.fzf/shell/key-bindings.fish
