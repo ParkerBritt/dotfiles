@@ -6,7 +6,7 @@ layout {
 
     // STATUS BAR
     pane size=2 borderless=true {
-        plugin location="file:$HOME/dotfiles/zellij/.config/zellij/zjstatus.wasm" {
+        plugin location="file:$HOME/.config/zellij/zjstatus.wasm" {
             format_left   "{mode} #[fg=#89B4FA,bold]"
             format_center ""
             format_right  "{datetime}"
