@@ -2,7 +2,7 @@ alias la='ls -a --icons'
 alias logout='qdbus org.kde.ksmserver /KSMServer logout 0 0 0'
 alias ll='eza -alh --icons'
 alias lc='eza -alh -snew --icons'
-alias vim='lvim'
+alias vim='nvim'
 alias top='btop'
 alias fetch='fastfetch --os-key "  "$DISTRO_ICON'
 alias ..='cd ..'
@@ -58,4 +58,3 @@ alias ....='cd ../../..'
 if test "$DISTRO_NAME" = "nixos"
     source $HOME/.config/fish/nix/aliases.fish    
 end
-
