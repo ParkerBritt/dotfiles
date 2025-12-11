@@ -16,11 +16,10 @@ if test -f ~/.config/fish/credentials.fish
     source ~/.config/fish/credentials.fish
 end
 
-set -gx EDITOR lvim
+set -gx EDITOR nvim
 set -gx OPENSSL_ia32cap ~0x200000200000000 # titanfall2 fix
 
 set -gx XDG_DATA_DIRS /home/parker/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:$XDG_DATA_DIRS
-# set -gx XDG_DATA_DIRS /home/parker/.nix-profile/share/applications:/home/parker/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:$XDG_DATA_DIRS
 
 set -gx P4CONFIG /home/parker/.config/Perforce/p4config
 set -gx P4IGNORE /home/parker/Perforce/y3-film/pipeline/perforce/p4ignore
@@ -28,7 +27,6 @@ set -gx P4IGNORE /home/parker/Perforce/y3-film/pipeline/perforce/p4ignore
 set -gx film_root /home/parker/Perforce/y3-film
 
 # for nix package manager
-# set -gx LOCALE_ARCHIVE /lib/locale/locale-archive
 set -gx NIXPKGS_ALLOW_UNFREE 1
 
 # rofi
@@ -40,3 +38,11 @@ set -gx DISTRO_ICON $(distro_icon)
 
 # maya dependency bug
 set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH $HOME/maya_fake_env/lib
+
+#usd
+set -gx PATH "$HOME/USD/bin" $PATH
+set -gx PYTHONPATH "$HOME/USD/lib/python" $PATH
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
