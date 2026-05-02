@@ -13,6 +13,8 @@ return {
       sh = { "shfmt" },
       python = { "black" },
       json = { "jq" },
+      cpp = { "clang_format" },
+      c = { "clang_format" },
     },
     -- The options you set here will be merged with the builtin formatters.
     -- You can also define any custom formatters here.
@@ -20,6 +22,9 @@ return {
       injected = { options = { ignore_errors = true } },
       black = {
         prepend_args = { "--line-length", "100" },
+      },
+      clang_format = {
+        prepend_args = { "--style={IndentWidth: 4, TabWidth: 4, ColumnLimit: 100}" },
       },
     },
   },
