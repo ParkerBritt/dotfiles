@@ -23,9 +23,6 @@ return {
       black = {
         prepend_args = { "--line-length", "100" },
       },
-      clang_format = {
-        prepend_args = { "--style={IndentWidth: 4, TabWidth: 4, ColumnLimit: 100}" },
-      },
     },
   },
 }
