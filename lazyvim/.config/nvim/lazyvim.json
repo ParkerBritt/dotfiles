@@ -1,8 +1,8 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.lang.clangd",
+    "lazyvim.plugins.extras.lang.python"
   ],
-  "install_version": 8,
   "news": {
     "NEWS.md": "11866"
   },
